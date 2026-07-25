@@ -1,0 +1,852 @@
+[22:13:35] [gui] Logging started (TXT) → logs/serial_log_20260717_221335.txt
+[22:13:37] [gui] Connected to COM8 @ 115200 baud
+[22:13:37] ets Jul 29 2019 12:21:46
+[22:13:37] rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+[22:13:37] configsip: 0, SPIWP:0xee
+[22:13:37] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[22:13:37] mode:DIO, clock div:2
+[22:13:37] load:0x3fff0030,len:6280
+[22:13:37] load:0x40078000,len:15864
+[22:13:37] load:0x40080400,len:3920
+[22:13:37] entry 0x4008063c
+[22:13:37] I (27) boot: ESP-IDF 5.5.3 2nd stage bootloader
+[22:13:37] I (27) boot: compile time Jul 16 2026 18:00:21
+[22:13:37] I (28) boot: Multicore bootloader
+[22:13:37] I (29) boot: chip revision: v3.1
+[22:13:37] I (31) boot.esp32: SPI Speed      : 40MHz
+[22:13:37] I (35) boot.esp32: SPI Mode       : DIO
+[22:13:37] I (39) boot.esp32: SPI Flash Size : 4MB
+[22:13:37] I (42) boot: Enabling RNG early entropy source...
+[22:13:37] I (47) boot: Partition Table:
+[22:13:37] I (49) boot: ## Label            Usage          Type ST Offset   Length
+[22:13:37] I (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[22:13:37] I (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[22:13:37] I (69) boot:  2 factory          factory app      00 00 00010000 00180000
+[22:13:37] I (75) boot:  3 storage          Unknown data     01 82 00190000 00270000
+[22:13:37] I (82) boot: End of partition table
+[22:13:37] I (85) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=386a0h (231072) map
+[22:13:37] I (172) esp_image: segment 1: paddr=000486c8 vaddr=3ffb0000 size=0446ch ( 17516) load
+[22:13:37] I (178) esp_image: segment 2: paddr=0004cb3c vaddr=40080000 size=034dch ( 13532) load
+[22:13:37] I (184) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=ba63ch (763452) map
+[22:13:37] I (445) esp_image: segment 4: paddr=0010a664 vaddr=400834dc size=15aa0h ( 88736) load
+[22:13:37] I (480) esp_image: segment 5: paddr=0012010c vaddr=50000000 size=00020h (    32) load
+[22:13:37] I (492) boot: Loaded app from partition at offset 0x10000
+[22:13:37] I (492) boot: Disabling RNG early entropy source...
+[22:13:37] I (503) cpu_start: Multicore app
+[22:13:37] I (511) cpu_start: GPIO 3 and 1 are used as console UART I/O pins
+[22:13:37] I (511) cpu_start: Pro cpu start user code
+[22:13:37] I (511) cpu_start: cpu freq: 160000000 Hz
+[22:13:37] I (513) app_init: Application information:
+[22:13:37] I (517) app_init: Project name:     esp32_display_taxi_meter
+[22:13:37] I (522) app_init: App version:      0e0b7e1-dirty
+[22:13:37] I (527) app_init: Compile time:     Jul 16 2026 17:52:26
+[22:13:37] I (532) app_init: ELF file SHA256:  a5eebc4f2...
+[22:13:37] I (536) app_init: ESP-IDF:          5.5.3
+[22:13:37] I (540) efuse_init: Min chip rev:     v0.0
+[22:13:37] I (544) efuse_init: Max chip rev:     v3.99 
+[22:13:37] I (548) efuse_init: Chip rev:         v3.1
+[22:13:37] I (552) heap_init: Initializing. RAM available for dynamic allocation:
+[22:13:37] I (558) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+[22:13:37] I (563) heap_init: At 3FFBB390 len 00024C70 (147 KiB): DRAM
+[22:13:37] I (568) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+[22:13:37] I (573) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[22:13:37] I (579) heap_init: At 40098F7C len 00007084 (28 KiB): IRAM
+[22:13:37] I (586) spi_flash: detected chip: generic
+[22:13:37] I (588) spi_flash: flash io: dio
+[22:13:37] I (592) main_task: Started on CPU0
+[22:13:37] I (595) main_task: Calling app_main()
+[22:13:37] I (597) app: ╔══════════════════════════════════════╗
+[22:13:37] I (609) app: ║  TaxiMeter Display + Backend          ║
+[22:13:37] I (614) app: ║  3.5" Capacitive Touch LCD            ║
+[22:13:37] I (619) app: ║  ST7796S + FT6336U + LVGL 8.3         ║
+[22:13:37] I (624) app: ╚══════════════════════════════════════╝
+[22:13:37] I (677) session: Session store loaded from NVS (namespace 'session')
+[22:13:37] I (678) bgworker: Background worker task started (persistent, one-time stack allocation)
+[22:13:37] I (685) wifi:wifi driver task: 3ffc6940, prio:23, stack:6656, core=0
+[22:13:37] I (700) wifi:wifi firmware version: 4df78f2
+[22:13:37] I (701) wifi:wifi certification version: v7.0
+[22:13:37] I (701) wifi:config NVS flash: enabled
+[22:13:37] I (701) wifi:config nano formatting: disabled
+[22:13:37] I (705) wifi:Init data frame dynamic rx buffer num: 16
+[22:13:37] I (710) wifi:Init static rx mgmt buffer num: 5
+[22:13:37] I (714) wifi:Init management short buffer num: 32
+[22:13:37] I (718) wifi:Init dynamic tx buffer num: 32
+[22:13:37] I (723) wifi:Init static rx buffer size: 1600
+[22:13:37] I (727) wifi:Init static rx buffer num: 6
+[22:13:37] I (730) wifi:Init dynamic rx buffer num: 16
+[22:13:37] I (735) wifi_init: rx ba win: 6
+[22:13:37] I (737) wifi_init: accept mbox: 6
+[22:13:37] I (740) wifi_init: tcpip mbox: 32
+[22:13:37] I (743) wifi_init: udp mbox: 6
+[22:13:37] I (746) wifi_init: tcp mbox: 6
+[22:13:37] I (749) wifi_init: tcp tx win: 5760
+[22:13:37] I (752) wifi_init: tcp rx win: 5760
+[22:13:37] I (755) wifi_init: tcp mss: 1440
+[22:13:37] I (758) wifi_init: WiFi IRAM OP enabled
+[22:13:37] I (762) wifi_init: WiFi RX IRAM OP enabled
+[22:13:37] W (766) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[22:13:37] I (775) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06
+[22:13:37] I (863) wifi:mode : sta (88:f1:55:32:58:2c)
+[22:13:37] I (864) wifi:enable tsf
+[22:13:37] I (867) app: WiFi init — connecting to: Mobitel 4G-489E
+[22:13:37] I (867) app: Waiting for WiFi...
+[22:13:38] I (880) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0
+[22:13:38] I (881) wifi:state: init -> auth (0xb0)
+[22:13:38] I (887) wifi:state: auth -> assoc (0x0)
+[22:13:38] I (892) wifi:state: assoc -> init (0x3a0)
+[22:13:38] I (896) wifi:new:<8,0>, old:<8,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0
+[22:13:38] W (898) app: WiFi disconnected — reconnecting...
+[22:13:40] W (3315) app: WiFi disconnected — reconnecting...
+[22:13:40] I (3329) wifi:new:<8,0>, old:<8,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0
+[22:13:40] I (3330) wifi:state: init -> auth (0xb0)
+[22:13:40] I (3336) wifi:state: auth -> assoc (0x0)
+[22:13:40] I (3347) wifi:state: assoc -> run (0x10)
+[22:13:40] I (3367) wifi:connected with Mobitel 4G-489E, aid = 23, channel 8, BW20, bssid = 1c:13:86:d6:48:9e
+[22:13:40] I (3368) wifi:security: WPA2-PSK, phy: bgn, rssi: -64
+[22:13:40] I (3374) wifi:pm start, type: 1
+[22:13:40] I (3374) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[22:13:40] I (3382) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[22:13:41] I (4448) esp_netif_handlers: sta ip: 192.168.8.135, mask: 255.255.255.0, gw: 192.168.8.1
+[22:13:41] I (4449) app: WiFi connected — IP: 192.168.8.135
+[22:13:45] I (8152) app: NTP sync: FAILED
+[22:13:45] I (8152) app: Display/touch/UI SKIPPED — headless build (ENABLE_DISPLAY=0 in main/CMakeLists.txt).
+[22:13:45] I (8153) app:   All business logic (auth/setup/ref/duty/trip/GPS) is unaffected — drive it via the
+[22:13:45] I (8161) app:   serial commands below or the Processing GUI. See doc 87 for how to switch this back on.
+[22:13:45] I (8171) trips_api: ══════════════════════════════════════
+[22:13:45] I (8182) trips_api: TRIPS REST API + JSON Storage Init
+[22:13:45] I (8187) trips_api:   API: https://mytaxis.softclient.com.au/taxis-api/api/Trips/{id}
+[22:13:45] I (8195) trips_api:   Default trip ID: 12772
+[22:13:45] I (8199) trips_api:   Storage backend: 2
+[22:13:45] I (8468) trips_api: Created storage directory: /spiffs/store
+[22:13:45] I (8469) trips_api: SPIFFS partition: 2287 KB total | 10 KB used | 2277 KB free
+[22:13:45] I (8470) trips_api: Storage Backend: SPIFFS (Flash, Permanent) ✓
+[22:13:45] I (8476) trips_api: Serial command reader STARTED
+[22:13:45] I (8480) trips_api: Type 'help' for all command prefixes (setup/auth/ref/duty/trip/session/mem/store/...).
+[22:13:45] I (8487) trips_api: TRIPS API Storage — READY ✓
+[22:13:45] > gps info
+[22:13:45] > gps info
+[22:13:45] I (8590) trips_api: Type 'api help' for available commands.
+[22:13:45] > I (8623) trips_api: ══════════════════════════════════════
+[22:13:45] I (8792) refdata:   Reading /spiffs/store/ref/tariffs.json (6361 bytes) — free heap=191 KB, largest block=108 KB
+[22:13:45] I (8820) refdata: Reference data module ready (call 'ref fetch' or go on-duty to load data)
+[22:13:45] I (8820) trip: Trip manager ready — fare-calc tick task started (every 2000ms)
+[22:13:45] I (8824) app: READY — headless (no display) ✓
+[22:13:45] I (8828) app: ══════════════════════════════════════
+[22:13:47] gps info
+[22:13:52] > gps info
+[22:13:57] > gps info
+[22:14:02] > gps info
+[22:14:07] > gps info
+[22:14:07] > I (30611) gps: GPS: fix OK | lat=9.8256 lon=80.2313 speed=1.8km/h sats=7 hdop=2.1 (idle — use 'gps start' for full log)
+[22:14:12] gps info
+[22:14:17] > gps info
+[22:14:22] > gps info
+[22:14:27] > gps info
+[22:14:32] > gps info
+[22:14:32] > setup network PBI8ZLOC
+[22:14:32] > setup network PBI8ZLOC
+[22:14:32] I (55664) setup: ══════════════════════════════════════
+[22:14:32] I (55664) setup: setup network: queued on background worker
+[22:14:32] I (55666) setup: NETWORK LOOKUP — passcode=PBI8ZLOC
+[22:14:32] > I (55678) api_client: → GET /devices-api/api/DevicePublic/Network?passcode=PBI8ZLOC
+[22:14:32] I (55684) api_client:   Heap before perform()       free=178 KB | largest free block=108 KB
+[22:14:34] I (57042) esp-x509-crt-bundle: Certificate validated
+[22:14:35] I (58381) api_client:   Heap after perform()        free=160 KB | largest free block=108 KB
+[22:14:35] I (58382) api_client: ← HTTP 200 (GET /devices-api/api/DevicePublic/Network?passcode=PBI8ZLOC)
+[22:14:35] I (58393) setup: NETWORK OK ✓ — network_id=2 company="Softclient" active=yes
+[22:14:35] I (58395) setup: ══════════════════════════════════════
+[22:14:35] I (58406) bgworker: Job finished: OK
+[22:14:37] gps info
+[22:14:37] > I (60621) gps: GPS: fix OK | lat=9.8256 lon=80.2313 speed=1.1km/h sats=7 hdop=2.1 (idle — use 'gps start' for full log)
+[22:14:42] gps info
+[22:14:47] > gps info
+[22:14:48] > setup vehicle Tu001
+[22:14:48] > setup vehicle Tu001
+[22:14:48] I (71269) setup: setup vehicle: queued on background worker
+[22:14:48] I (71269) setup: ══════════════════════════════════════
+[22:14:48] > I (71276) setup: VEHICLE LOOKUP — networkId=2 vehicleNo=Tu001
+[22:14:48] I (71283) api_client: → GET /devices-api/api/DevicePublic/Vehicle?networkId=2&vehicleNo=Tu001
+[22:14:48] I (71290) api_client:   Heap before perform()       free=177 KB | largest free block=108 KB
+[22:14:50] I (73751) esp-x509-crt-bundle: Certificate validated
+[22:14:52] I (74904) api_client:   Heap after perform()        free=160 KB | largest free block=108 KB
+[22:14:52] I (74905) api_client: ← HTTP 200 (GET /devices-api/api/DevicePublic/Vehicle?networkId=2&vehicleNo=Tu001)
+[22:14:52] I (74919) setup: VEHICLE OK ✓ — vehicle_id=105 vehicle_type_id=4 active=yes
+[22:14:52] I (74920) setup: ══════════════════════════════════════
+[22:14:52] I (74930) bgworker: Job finished: OK
+[22:14:52] gps info
+[22:14:57] > gps info
+[22:15:00] > setup info
+[22:15:00] > setup info
+[22:15:00] I (83236) setup: network_id=2 vehicle_id=105 vehicle_type_id=4 vehicle_no=Tu001
+[22:15:02] > gps info
+[22:15:07] > gps info
+[22:15:07] > I (90623) gps: GPS: fix OK | lat=9.8257 lon=80.2313 speed=2.2km/h sats=7 hdop=2.1 (idle — use 'gps start' for full log)
+[22:15:12] gps info
+[22:15:17] > gps info
+[22:15:21] > auth login 12345 12345
+[22:15:21] > auth login 12345 12345
+[22:15:21] I (104004) auth: auth login: queued on background worker — watch below for LOGIN OK/FAILED
+[22:15:21] > I (104005) auth: ══════════════════════════════════════
+[22:15:21] I (104014) auth: LOGIN — user=12345 mac=88:F1:55:32:58:2C
+[22:15:21] I (104021) api_client: → POST /taxis-api/api/Authentications/Login
+[22:15:21] I (104026) api_client:   Heap before perform()       free=177 KB | largest free block=108 KB
+[22:15:22] gps info
+[22:15:23] > I (106444) esp-x509-crt-bundle: Certificate validated
+[22:15:24] I (107835) wifi:<ba-add>idx:0 (ifx:0, 1c:13:86:d6:48:9e), tid:0, ssn:29, winSize:64
+[22:15:24] I (107848) api_client:   Heap after perform()        free=159 KB | largest free block=108 KB
+[22:15:24] I (107849) api_client: ← HTTP 200 (POST /taxis-api/api/Authentications/Login)
+[22:15:24] I (107871) auth:   Login response has no vehicle info — keeping vehicle_id=105 vehicle_type_id=4
+[22:15:25] I (107872) auth: LOGIN OK ✓ — driver_id=130 vehicle_id=105 vehicle_type_id=4
+[22:15:25] I (107879) api_client: → GET /taxis-api/api/Driver
+[22:15:25] I (107882) api_client:   Heap before perform()       free=176 KB | largest free block=108 KB
+[22:15:26] I (109210) esp-x509-crt-bundle: Certificate validated
+[22:15:27] gps info
+[22:15:27] I (110315) api_client:   Heap after perform()        free=159 KB | largest free block=108 KB
+[22:15:27] I (110326) api_client: ← HTTP 200 (GET /taxis-api/api/Driver)
+[22:15:27] I (110343) auth:   Driver profile: Tuyavan 
+[22:15:27] I (110351) auth: ══════════════════════════════════════
+[22:15:27] I (110365) bgworker: Job finished: OK
+[22:15:32] > gps info
+[22:15:34] > auth info
+[22:15:34] > auth info
+[22:15:34] I (117383) auth: Logged in: yes | Access token valid: yes
+[22:15:34] I (117384) session: ══════════════════════════════════════
+[22:15:34] I (117390) session: SESSION STORE (NVS namespace 'session')
+[22:15:34] I (117395) session: ──────────────────────────────────────
+[22:15:34] I (117407) session:   Access token:     SET (621 chars) — VALID
+[22:15:34] I (117413) session:   Refresh token:    SET (68 chars)
+[22:15:34] I (117418) session:   Access expiry:    1784393127 (epoch)
+[22:15:34] I (117423) session:   Refresh expiry:   1784565927 (epoch)
+[22:15:34] I (117428) session:   Driver:           id=130 no=12345 name=Tuyavan 
+[22:15:34] I (117434) session:   Vehicle:          id=105 type_id=4 no=Tu001
+[22:15:34] I (117440) session:   Network:          id=2 company=Softclient
+[22:15:34] I (117446) session:   Tariff type:      Maxi
+[22:15:34] I (117450) session:   Duty status:      ON DUTY
+[22:15:34] I (117454) session:   Active trip:      local_id=0 server_job_id=0
+[22:15:34] I (117460) session:   Next local trip#: 1
+[22:15:34] I (117464) session: ══════════════════════════════════════
+[22:15:37] > gps info
+[22:15:37] > I (120625) gps: GPS: fix OK | lat=9.8257 lon=80.2313 speed=1.0km/h sats=7 hdop=2.1 (idle — use 'gps start' for full log)
+[22:15:42] gps info
+[22:15:47] > gps info
+[22:15:48] > ref fetch
+[22:15:48] > ref fetch
+[22:15:48] I (131716) refdata: ══════════════════════════════════════
+[22:15:48] I (131716) refdata: ref fetch: queued on background worker — watch below for progress
+[22:15:48] I (131718) refdata: REFERENCE DATA — fetching all 4 categories
+[22:15:48] > I (131836) api_client: → GET /taxis-api/api/VehicleType/4/Tarifs/v2
+[22:15:48] I (131837) api_client:   Heap before perform()       free=178 KB | largest free block=108 KB
+[22:15:50] I (133171) esp-x509-crt-bundle: Certificate validated
+[22:15:51] I (134375) api_client:   Heap after perform()        free=160 KB | largest free block=108 KB
+[22:15:51] I (134376) api_client: ← HTTP 200 (GET /taxis-api/api/VehicleType/4/Tarifs/v2)
+[22:15:51] I (134391) api_client:   Wrote 6361 bytes to /spiffs/store/ref/tariffs.json
+[22:15:51] I (134392) refdata:   Reading /spiffs/store/ref/tariffs.json (6361 bytes) — free heap=184 KB, largest block=108 KB
+[22:15:51] I (134423) refdata: tariffs: 8 rows loaded
+[22:15:51] I (134595) api_client: → GET /taxis-api/api/FixedFares
+[22:15:51] I (134596) api_client:   Heap before perform()       free=177 KB | largest free block=108 KB
+[22:15:52] gps info
+[22:15:53] > I (135954) esp-x509-crt-bundle: Certificate validated
+[22:15:54] I (137179) api_client:   Heap after perform()        free=160 KB | largest free block=108 KB
+[22:15:54] I (137179) api_client: ← HTTP 200 (GET /taxis-api/api/FixedFares)
+[22:15:54] I (137189) api_client:   Wrote 905 bytes to /spiffs/store/ref/fixed_rates.json
+[22:15:54] I (137190) refdata:   Reading /spiffs/store/ref/fixed_rates.json (905 bytes) — free heap=183 KB, largest block=108 KB
+[22:15:54] I (137203) refdata: fixed_rates: 2 rows loaded
+[22:15:54] I (137377) api_client: → GET /taxis-api/api/SpecialFare
+[22:15:54] I (137378) api_client:   Heap before perform()       free=177 KB | largest free block=108 KB
+[22:15:55] I (138728) esp-x509-crt-bundle: Certificate validated
+[22:15:57] I (140014) api_client:   Heap after perform()        free=159 KB | largest free block=108 KB
+[22:15:57] I (140015) api_client: ← HTTP 200 (GET /taxis-api/api/SpecialFare)
+[22:15:57] I (140025) api_client:   Wrote 1930 bytes to /spiffs/store/ref/special_fares.json
+[22:15:57] I (140026) refdata:   Reading /spiffs/store/ref/special_fares.json (1930 bytes) — free heap=183 KB, largest block=108 KB
+[22:15:57] I (140044) refdata: special_fares: 9 rows loaded
+[22:15:57] I (140298) api_client: → GET /devices-api/api/PublicHolidays
+[22:15:57] I (140299) api_client:   Heap before perform()       free=177 KB | largest free block=108 KB
+[22:15:57] gps info
+[22:15:58] > I (141632) esp-x509-crt-bundle: Certificate validated
+[22:16:01] E (144092) esp-tls-mbedtls: read error :-0x7200
+[22:16:01] E (144093) transport_base: esp_tls_conn_read error, errno=Success
+[22:16:01] E (144094) HTTP_CLIENT: Incomlete data received, ret=-29184, 50767/75459 bytes
+[22:16:01] E (144099) api_client:   HTTP transport error event
+[22:16:01] I (144104) api_client:   Heap after perform()        free=157 KB | largest free block=108 KB
+[22:16:01] E (144112) api_client: ✗ GET /devices-api/api/PublicHolidays FAILED: ESP_ERR_HTTP_INCOMPLETE_DATA (err=0x700c)
+[22:16:01] W (144386) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/public_holidays.json
+[22:16:01] E (144387) refdata: public_holidays: fetch failed (HTTP 200)
+[22:16:01] W (144391) refdata: REFERENCE DATA — one or more categories failed (see above). Continuing with
+[22:16:01] W (144399) refdata:   whatever was already loaded/cached for the categories that did fail.
+[22:16:01] I (144407) refdata: ══════════════════════════════════════
+[22:16:01] I (144419) bgworker: Job finished: FAILED
+[22:16:02] gps info
+[22:16:07] > gps info
+[22:16:07] > I (150661) gps: GPS: fix OK | lat=9.8257 lon=80.2313 speed=0.5km/h sats=7 hdop=2.2 (idle — use 'gps start' for full log)
+[22:16:12] gps info
+[22:16:17] > gps info
+[22:16:18] > ref list tariffs
+[22:16:18] > ref list tariffs
+[22:16:18] #    num    name                 type     flagfall   distR1   distR2  distRng  start    end fD-tD PH
+[22:16:18] 5    04     Maxi Day Rate(06:00-21:59) Maxi       775.00   391.00   355.00    12.00  06:00  23:58  1-0  Y
+[22:16:18] 2    01     Sedan Day Rate(06:00-21:59) Sedan      517.00   261.00   237.00    12.00  06:00  21:59  1-0  Y
+[22:16:18] 3    02     Sedan Night Rate (22:00 - 05:59 Sedan      517.00   310.00   282.00    12.00  22:00  05:59  1-0  Y
+[22:16:18] 6    05     Maxi Night (10:00-05:59) Maxi       775.00   465.00   423.00    12.00  22:00  05:59  0-4  Y
+[22:16:18] 11   06     Maxi Night OWL Rates (00:00-05: Maxi      1040.00   465.00   423.00    12.00  00:00  05:59  6-0  Y
+[22:16:18] 8    06     Maxi Night OWL Rates (22:00-23: Maxi      1040.00   465.00   423.00    12.00  22:00  23:59  5-6  Y
+[22:16:18] 13   03     Sedan Night Owl Rate (22:00 - 2 Sedan      782.00   310.00   282.00    12.00  22:00  23:59  5-6  Y
+[22:16:19] 12   03     Sedan Night Owl Rate (00:00 - 0 Sedan      782.00   310.00   282.00    12.00  00:00  05:59  6-0  Y
+[22:16:19] (8 rows)
+[22:16:22] > gps info
+[22:16:25] > ref list fixedrates
+[22:16:25] > ref list fixedrates
+[22:16:25] #      name                     from             to                     fare active
+[22:16:25] 1      City                     Airport                                60.00 Y
+[22:16:25] 2      City                     Airport                                80.00 Y
+[22:16:25] (2 rows)
+[22:16:27] > gps info
+[22:16:29] > ref list specialfares
+[22:16:29] > ref list specialfares
+[22:16:29] #      code         name                           fare typeName  
+[22:16:29] 15     VomitFee     Vomit Fee                  12000.00 Extras    
+[22:16:29] 14     M4WestConnex M4WConnex                    578.00 Toll      
+[22:16:29] 13     M6WestConnex M6WConnex                    600.00 Toll      
+[22:16:29] 11     International M5J Masco International M5J Mascot     545.00 Airport   
+[22:16:29] 10     Rank Fee     Airport M8 towards Liverpool     545.00 Airport   
+[22:16:29] 9      Rank Fee     Airport M8 towards Parramatta     545.00 Airport   
+[22:16:29] 8      Domestic 2GC Mascot Domestic 2GC Mascot          545.00 Airport   
+[22:16:29] 6      BookingFee   Booking Fee                  250.00 Others    
+[22:16:29] 5      Levy         Levy Fare                    132.00 Others    
+[22:16:29] (9 rows)
+[22:16:32] > gps info
+[22:16:33] > ref list holidays
+[22:16:33] > ref list holidays
+[22:16:33] #      date       name
+[22:16:33] (0 rows)
+[22:16:37] > gps info
+[22:16:37] > I (180727) gps: GPS: fix OK | lat=9.8257 lon=80.2313 speed=0.4km/h sats=6 hdop=2.9 (idle — use 'gps start' for full log)
+[22:16:40] > ref info
+[22:16:40] ref info
+[22:16:40] I (182977) refdata: tariffs=8 fixed_rates=2 special_fares=9 holidays=0 | last_fetch_all=-1s ago
+[22:16:42] > gps info
+[22:16:47] > duty on
+[22:16:47] > duty on
+[22:16:47] I (190209) duty: ON DUTY (local status updated immediately)
+[22:16:47] > I (190212) api_client: → GET /taxis-api/api/DriverStatus/OnDuty
+[22:16:47] I (190213) api_client:   Heap before perform()       free=177 KB | largest free block=108 KB
+[22:16:47] gps info
+[22:16:48] > I (191557) esp-x509-crt-bundle: Certificate validated
+[22:16:50] I (192945) api_client:   Heap after perform()        free=160 KB | largest free block=108 KB
+[22:16:50] I (192946) api_client: ← HTTP 200 (GET /taxis-api/api/DriverStatus/OnDuty)
+[22:16:50] I (192954) duty:   OnDuty API call: reached server (HTTP 200) — result is informational only, never blocks the driver
+[22:16:50] I (192960) bgworker: Job finished: OK
+[22:16:50] I (192964) refdata: ══════════════════════════════════════
+[22:16:50] I (192975) refdata: REFERENCE DATA — fetching all 4 categories
+[22:16:50] I (193084) api_client: → GET /taxis-api/api/VehicleType/4/Tarifs/v2
+[22:16:50] I (193085) api_client:   Heap before perform()       free=177 KB | largest free block=108 KB
+[22:16:51] I (194430) esp-x509-crt-bundle: Certificate validated
+[22:16:52] gps info
+[22:16:52] > I (195805) api_client:   Heap after perform()        free=159 KB | largest free block=108 KB
+[22:16:52] I (195806) api_client: ← HTTP 200 (GET /taxis-api/api/VehicleType/4/Tarifs/v2)
+[22:16:52] I (195822) api_client:   Wrote 6361 bytes to /spiffs/store/ref/tariffs.json
+[22:16:52] I (195823) refdata:   Reading /spiffs/store/ref/tariffs.json (6361 bytes) — free heap=183 KB, largest block=108 KB
+[22:16:52] I (195854) refdata: tariffs: 8 rows loaded
+[22:16:53] I (195947) api_client: → GET /taxis-api/api/FixedFares
+[22:16:53] I (195948) api_client:   Heap before perform()       free=177 KB | largest free block=108 KB
+[22:16:54] I (197287) esp-x509-crt-bundle: Certificate validated
+[22:16:55] I (198431) api_client:   Heap after perform()        free=159 KB | largest free block=108 KB
+[22:16:55] I (198431) api_client: ← HTTP 200 (GET /taxis-api/api/FixedFares)
+[22:16:55] I (198440) api_client:   Wrote 905 bytes to /spiffs/store/ref/fixed_rates.json
+[22:16:55] I (198442) refdata:   Reading /spiffs/store/ref/fixed_rates.json (905 bytes) — free heap=182 KB, largest block=108 KB
+[22:16:55] I (198455) refdata: fixed_rates: 2 rows loaded
+[22:16:55] I (198550) api_client: → GET /taxis-api/api/SpecialFare
+[22:16:55] I (198551) api_client:   Heap before perform()       free=177 KB | largest free block=108 KB
+[22:16:57] gps info
+[22:16:58] > I (200968) esp-x509-crt-bundle: Certificate validated
+[22:16:59] I (202109) api_client:   Heap after perform()        free=159 KB | largest free block=108 KB
+[22:16:59] I (202110) api_client: ← HTTP 200 (GET /taxis-api/api/SpecialFare)
+[22:16:59] I (202121) api_client:   Wrote 1930 bytes to /spiffs/store/ref/special_fares.json
+[22:16:59] I (202122) refdata:   Reading /spiffs/store/ref/special_fares.json (1930 bytes) — free heap=182 KB, largest block=108 KB
+[22:16:59] I (202140) refdata: special_fares: 9 rows loaded
+[22:16:59] I (202394) api_client: → GET /devices-api/api/PublicHolidays
+[22:16:59] I (202395) api_client:   Heap before perform()       free=177 KB | largest free block=108 KB
+[22:16:59] > duty info
+[22:16:59] duty info
+[22:16:59] I (202530) duty: Duty status: ON DUTY
+[22:17:00] > I (203737) esp-x509-crt-bundle: Certificate validated
+[22:17:02] gps info
+[22:17:02] > E (205844) esp-tls-mbedtls: read error :-0x7200
+[22:17:02] E (205845) transport_base: esp_tls_conn_read error, errno=Success
+[22:17:02] E (205845) HTTP_CLIENT: Incomlete data received, ret=-29184, 55833/75459 bytes
+[22:17:02] E (205851) api_client:   HTTP transport error event
+[22:17:02] I (205856) api_client:   Heap after perform()        free=155 KB | largest free block=108 KB
+[22:17:02] E (205864) api_client: ✗ GET /devices-api/api/PublicHolidays FAILED: ESP_ERR_HTTP_INCOMPLETE_DATA (err=0x700c)
+[22:17:03] W (206148) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/public_holidays.json
+[22:17:03] E (206149) refdata: public_holidays: fetch failed (HTTP 200)
+[22:17:03] W (206152) refdata: REFERENCE DATA — one or more categories failed (see above). Continuing with
+[22:17:03] W (206161) refdata:   whatever was already loaded/cached for the categories that did fail.
+[22:17:03] I (206169) refdata: ══════════════════════════════════════
+[22:17:03] I (206181) bgworker: Job finished: OK
+[22:17:07] gps info
+[22:17:07] > I (210737) gps: GPS: fix OK | lat=9.8257 lon=80.2313 speed=1.1km/h sats=6 hdop=2.9 (idle — use 'gps start' for full log)
+[22:17:08] > trip start
+[22:17:08] trip start
+[22:17:08] I (211332) farecalc: ══════════════════════════════════════
+[22:17:08] I (211333) farecalc: METER STARTED — tariff #5 "Maxi Day Rate(06:00-21:59)" (Maxi) flagfall=775.00¢ distRate=391.00¢/km distRate2=355.00¢/km@12.0km timeRate=169.50¢/min
+[22:17:08] I (211348) farecalc: ══════════════════════════════════════
+[22:17:08] I (211361) trip:   Pickup location: 9.825654, 80.231332
+[22:17:08] I (211366) trip:   Auto-added special fare: Levy Fare (132.00¢)
+[22:17:08] I (211371) trip: TRIP #1 STARTED — customer=""
+[22:17:08] > trip info
+[22:17:08] I (211633) trip: ══════════════════════════════════════
+[22:17:08] I (211634) trip: TRIP INFO
+[22:17:08] I (211637) trip:   Local trip id:    1
+[22:17:08] I (211640) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:08] I (211646) trip:   Customer:         (none)
+[22:17:08] I (211650) trip:   Running:          yes
+[22:17:08] I (211654) trip:   Tariff:           #5 type=Maxi
+[22:17:08] I (211658) trip:   GPS active:       no | speed=0.0 km/h
+[22:17:08] I (211663) trip:   Distance:         0.000 km
+[22:17:08] I (211667) trip:   ── Fare breakdown ──
+[22:17:08] I (211672) trip:   Flag fall:          775.00¢
+[22:17:08] I (211676) trip:   Distance fare:        0.00¢
+[22:17:08] I (211680) trip:   Time fare:            0.00¢
+[22:17:08] I (211684) trip:   GPS-inactive fare:    0.00¢
+[22:17:08] I (211689) trip:   Extras:               0.00¢
+[22:17:08] I (211693) trip:   Special fares:      132.00¢
+[22:17:08] I (211697) trip:   TOTAL:              907.00¢  ($9.07)
+[22:17:08] I (211702) trip: ══════════════════════════════════════
+[22:17:10] > trip info
+[22:17:10] I (213414) trip: ══════════════════════════════════════
+[22:17:10] I (213416) trip: TRIP INFO
+[22:17:10] I (213418) trip:   Local trip id:    1
+[22:17:10] I (213421) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:10] I (213428) trip:   Customer:         (none)
+[22:17:10] I (213432) trip:   Running:          yes
+[22:17:10] I (213435) trip:   Tariff:           #5 type=Maxi
+[22:17:10] I (213440) trip:   GPS active:       yes | speed=0.8 km/h
+[22:17:10] I (213445) trip:   Distance:         0.000 km
+[22:17:10] I (213449) trip:   ── Fare breakdown ──
+[22:17:10] I (213453) trip:   Flag fall:          775.00¢
+[22:17:10] I (213457) trip:   Distance fare:        0.00¢
+[22:17:10] I (213462) trip:   Time fare:            5.65¢
+[22:17:10] I (213466) trip:   GPS-inactive fare:    0.00¢
+[22:17:10] I (213470) trip:   Extras:               0.00¢
+[22:17:10] I (213474) trip:   Special fares:      132.00¢
+[22:17:10] I (213479) trip:   TOTAL:              912.65¢  ($9.13)
+[22:17:10] I (213484) trip: ══════════════════════════════════════
+[22:17:12] > trip info
+[22:17:12] I (215446) trip: ══════════════════════════════════════
+[22:17:12] I (215447) trip: TRIP INFO
+[22:17:12] I (215449) trip:   Local trip id:    1
+[22:17:12] I (215453) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:12] I (215460) trip:   Customer:         (none)
+[22:17:12] I (215463) trip:   Running:          yes
+[22:17:12] I (215467) trip:   Tariff:           #5 type=Maxi
+[22:17:12] I (215472) trip:   GPS active:       yes | speed=0.7 km/h
+[22:17:12] I (215477) trip:   Distance:         0.000 km
+[22:17:12] I (215481) trip:   ── Fare breakdown ──
+[22:17:12] I (215485) trip:   Flag fall:          775.00¢
+[22:17:12] I (215489) trip:   Distance fare:        0.00¢
+[22:17:12] I (215494) trip:   Time fare:           11.30¢
+[22:17:12] I (215498) trip:   GPS-inactive fare:    0.00¢
+[22:17:12] I (215502) trip:   Extras:               0.00¢
+[22:17:12] I (215506) trip:   Special fares:      132.00¢
+[22:17:12] I (215511) trip:   TOTAL:              918.30¢  ($9.18)
+[22:17:12] I (215516) trip: ══════════════════════════════════════
+[22:17:12] > gps info
+[22:17:14] > trip info
+[22:17:14] I (217458) trip: ══════════════════════════════════════
+[22:17:14] I (217459) trip: TRIP INFO
+[22:17:14] I (217462) trip:   Local trip id:    1
+[22:17:14] I (217465) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:14] I (217472) trip:   Customer:         (none)
+[22:17:14] I (217475) trip:   Running:          yes
+[22:17:14] I (217479) trip:   Tariff:           #5 type=Maxi
+[22:17:14] I (217484) trip:   GPS active:       yes | speed=0.3 km/h
+[22:17:14] I (217489) trip:   Distance:         0.000 km
+[22:17:14] I (217493) trip:   ── Fare breakdown ──
+[22:17:14] I (217497) trip:   Flag fall:          775.00¢
+[22:17:14] I (217501) trip:   Distance fare:        0.00¢
+[22:17:14] I (217506) trip:   Time fare:           16.95¢
+[22:17:14] I (217510) trip:   GPS-inactive fare:    0.00¢
+[22:17:14] I (217514) trip:   Extras:               0.00¢
+[22:17:14] I (217518) trip:   Special fares:      132.00¢
+[22:17:14] I (217523) trip:   TOTAL:              923.95¢  ($9.24)
+[22:17:14] I (217528) trip: ══════════════════════════════════════
+[22:17:16] > trip info
+[22:17:16] I (219439) trip: ══════════════════════════════════════
+[22:17:16] I (219440) trip: TRIP INFO
+[22:17:16] I (219443) trip:   Local trip id:    1
+[22:17:16] I (219446) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:16] I (219453) trip:   Customer:         (none)
+[22:17:16] I (219456) trip:   Running:          yes
+[22:17:16] I (219460) trip:   Tariff:           #5 type=Maxi
+[22:17:16] I (219465) trip:   GPS active:       yes | speed=0.1 km/h
+[22:17:16] I (219470) trip:   Distance:         0.000 km
+[22:17:16] I (219474) trip:   ── Fare breakdown ──
+[22:17:16] I (219478) trip:   Flag fall:          775.00¢
+[22:17:16] I (219482) trip:   Distance fare:        0.00¢
+[22:17:16] I (219487) trip:   Time fare:           22.60¢
+[22:17:16] I (219491) trip:   GPS-inactive fare:    0.00¢
+[22:17:16] I (219495) trip:   Extras:               0.00¢
+[22:17:16] I (219499) trip:   Special fares:      132.00¢
+[22:17:16] I (219504) trip:   TOTAL:              929.60¢  ($9.30)
+[22:17:16] I (219509) trip: ══════════════════════════════════════
+[22:17:17] > gps info
+[22:17:18] > trip info
+[22:17:18] I (221452) trip: ══════════════════════════════════════
+[22:17:18] I (221453) trip: TRIP INFO
+[22:17:18] I (221456) trip:   Local trip id:    1
+[22:17:18] I (221459) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:18] I (221466) trip:   Customer:         (none)
+[22:17:18] I (221469) trip:   Running:          yes
+[22:17:18] I (221473) trip:   Tariff:           #5 type=Maxi
+[22:17:18] I (221478) trip:   GPS active:       yes | speed=1.0 km/h
+[22:17:18] I (221483) trip:   Distance:         0.000 km
+[22:17:18] I (221487) trip:   ── Fare breakdown ──
+[22:17:18] I (221491) trip:   Flag fall:          775.00¢
+[22:17:18] I (221495) trip:   Distance fare:        0.00¢
+[22:17:18] I (221500) trip:   Time fare:           28.25¢
+[22:17:18] I (221504) trip:   GPS-inactive fare:    0.00¢
+[22:17:18] I (221508) trip:   Extras:               0.00¢
+[22:17:18] I (221512) trip:   Special fares:      132.00¢
+[22:17:18] I (221517) trip:   TOTAL:              935.25¢  ($9.35)
+[22:17:18] I (221522) trip: ══════════════════════════════════════
+[22:17:20] > trip info
+[22:17:20] > trip info
+[22:17:20] I (223083) trip: ══════════════════════════════════════
+[22:17:20] I (223085) trip: TRIP INFO
+[22:17:20] I (223087) trip:   Local trip id:    1
+[22:17:20] I (223090) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:20] I (223097) trip:   Customer:         (none)
+[22:17:20] I (223101) trip:   Running:          yes
+[22:17:20] I (223104) trip:   Tariff:           #5 type=Maxi
+[22:17:20] I (223109) trip:   GPS active:       yes | speed=3.0 km/h
+[22:17:20] I (223114) trip:   Distance:         0.000 km
+[22:17:20] I (223118) trip:   ── Fare breakdown ──
+[22:17:20] I (223122) trip:   Flag fall:          775.00¢
+[22:17:20] I (223126) trip:   Distance fare:        0.00¢
+[22:17:20] I (223131) trip:   Time fare:           33.90¢
+[22:17:20] I (223135) trip:   GPS-inactive fare:    0.00¢
+[22:17:20] I (223139) trip:   Extras:               0.00¢
+[22:17:20] I (223143) trip:   Special fares:      132.00¢
+[22:17:20] I (223148) trip:   TOTAL:              940.90¢  ($9.41)
+[22:17:20] I (223153) trip: ══════════════════════════════════════
+[22:17:20] > trip info
+[22:17:20] I (223464) trip: ══════════════════════════════════════
+[22:17:20] I (223466) trip: TRIP INFO
+[22:17:20] I (223468) trip:   Local trip id:    1
+[22:17:20] I (223471) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:20] I (223478) trip:   Customer:         (none)
+[22:17:20] I (223482) trip:   Running:          yes
+[22:17:20] I (223485) trip:   Tariff:           #5 type=Maxi
+[22:17:20] I (223490) trip:   GPS active:       yes | speed=3.0 km/h
+[22:17:20] I (223495) trip:   Distance:         0.000 km
+[22:17:20] I (223499) trip:   ── Fare breakdown ──
+[22:17:20] I (223503) trip:   Flag fall:          775.00¢
+[22:17:20] I (223507) trip:   Distance fare:        0.00¢
+[22:17:20] I (223512) trip:   Time fare:           33.90¢
+[22:17:20] I (223516) trip:   GPS-inactive fare:    0.00¢
+[22:17:20] I (223520) trip:   Extras:               0.00¢
+[22:17:20] I (223524) trip:   Special fares:      132.00¢
+[22:17:20] I (223529) trip:   TOTAL:              940.90¢  ($9.41)
+[22:17:20] I (223534) trip: ══════════════════════════════════════
+[22:17:22] > trip info
+[22:17:22] I (225495) trip: ══════════════════════════════════════
+[22:17:22] I (225497) trip: TRIP INFO
+[22:17:22] I (225499) trip:   Local trip id:    1
+[22:17:22] I (225502) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:22] I (225509) trip:   Customer:         (none)
+[22:17:22] I (225513) trip:   Running:          yes
+[22:17:22] I (225516) trip:   Tariff:           #5 type=Maxi
+[22:17:22] I (225521) trip:   GPS active:       yes | speed=2.3 km/h
+[22:17:22] I (225526) trip:   Distance:         0.000 km
+[22:17:22] I (225530) trip:   ── Fare breakdown ──
+[22:17:22] I (225534) trip:   Flag fall:          775.00¢
+[22:17:22] I (225538) trip:   Distance fare:        0.00¢
+[22:17:22] I (225543) trip:   Time fare:           39.55¢
+[22:17:22] I (225547) trip:   GPS-inactive fare:    0.00¢
+[22:17:22] I (225551) trip:   Extras:               0.00¢
+[22:17:22] I (225555) trip:   Special fares:      132.00¢
+[22:17:22] I (225560) trip:   TOTAL:              946.55¢  ($9.47)
+[22:17:22] I (225565) trip: ══════════════════════════════════════
+[22:17:22] > gps info
+[22:17:24] > trip info
+[22:17:24] I (227468) trip: ══════════════════════════════════════
+[22:17:24] I (227470) trip: TRIP INFO
+[22:17:24] I (227472) trip:   Local trip id:    1
+[22:17:24] I (227475) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:24] I (227482) trip:   Customer:         (none)
+[22:17:24] I (227486) trip:   Running:          yes
+[22:17:24] I (227489) trip:   Tariff:           #5 type=Maxi
+[22:17:24] I (227494) trip:   GPS active:       yes | speed=2.0 km/h
+[22:17:24] I (227499) trip:   Distance:         0.000 km
+[22:17:24] I (227503) trip:   ── Fare breakdown ──
+[22:17:24] I (227507) trip:   Flag fall:          775.00¢
+[22:17:24] I (227511) trip:   Distance fare:        0.00¢
+[22:17:24] I (227516) trip:   Time fare:           45.20¢
+[22:17:24] I (227520) trip:   GPS-inactive fare:    0.00¢
+[22:17:24] I (227524) trip:   Extras:               0.00¢
+[22:17:24] I (227528) trip:   Special fares:      132.00¢
+[22:17:24] I (227533) trip:   TOTAL:              952.20¢  ($9.52)
+[22:17:24] I (227538) trip: ══════════════════════════════════════
+[22:17:26] > trip info
+[22:17:26] I (229500) trip: ══════════════════════════════════════
+[22:17:26] I (229502) trip: TRIP INFO
+[22:17:26] I (229504) trip:   Local trip id:    1
+[22:17:26] I (229507) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:26] I (229514) trip:   Customer:         (none)
+[22:17:26] I (229518) trip:   Running:          yes
+[22:17:26] I (229521) trip:   Tariff:           #5 type=Maxi
+[22:17:26] I (229526) trip:   GPS active:       yes | speed=1.0 km/h
+[22:17:26] I (229531) trip:   Distance:         0.000 km
+[22:17:26] I (229535) trip:   ── Fare breakdown ──
+[22:17:26] I (229539) trip:   Flag fall:          775.00¢
+[22:17:26] I (229543) trip:   Distance fare:        0.00¢
+[22:17:26] I (229548) trip:   Time fare:           50.85¢
+[22:17:26] I (229552) trip:   GPS-inactive fare:    0.00¢
+[22:17:26] I (229556) trip:   Extras:               0.00¢
+[22:17:26] I (229560) trip:   Special fares:      132.00¢
+[22:17:26] I (229565) trip:   TOTAL:              957.85¢  ($9.58)
+[22:17:26] I (229570) trip: ══════════════════════════════════════
+[22:17:27] > gps info
+[22:17:28] > trip info
+[22:17:28] I (231511) trip: ══════════════════════════════════════
+[22:17:28] I (231512) trip: TRIP INFO
+[22:17:28] I (231515) trip:   Local trip id:    1
+[22:17:28] I (231518) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:28] I (231525) trip:   Customer:         (none)
+[22:17:28] I (231528) trip:   Running:          yes
+[22:17:28] I (231532) trip:   Tariff:           #5 type=Maxi
+[22:17:28] I (231537) trip:   GPS active:       yes | speed=1.4 km/h
+[22:17:28] I (231542) trip:   Distance:         0.000 km
+[22:17:28] I (231546) trip:   ── Fare breakdown ──
+[22:17:28] I (231550) trip:   Flag fall:          775.00¢
+[22:17:28] I (231554) trip:   Distance fare:        0.00¢
+[22:17:28] I (231559) trip:   Time fare:           56.50¢
+[22:17:28] I (231563) trip:   GPS-inactive fare:    0.00¢
+[22:17:28] I (231567) trip:   Extras:               0.00¢
+[22:17:28] I (231571) trip:   Special fares:      132.00¢
+[22:17:28] I (231576) trip:   TOTAL:              963.50¢  ($9.63)
+[22:17:28] I (231581) trip: ══════════════════════════════════════
+[22:17:30] > trip info
+[22:17:30] I (233543) trip: ══════════════════════════════════════
+[22:17:30] I (233544) trip: TRIP INFO
+[22:17:30] I (233547) trip:   Local trip id:    1
+[22:17:30] I (233550) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:30] I (233557) trip:   Customer:         (none)
+[22:17:30] I (233560) trip:   Running:          yes
+[22:17:30] I (233564) trip:   Tariff:           #5 type=Maxi
+[22:17:30] I (233569) trip:   GPS active:       yes | speed=1.3 km/h
+[22:17:30] I (233574) trip:   Distance:         0.000 km
+[22:17:30] I (233578) trip:   ── Fare breakdown ──
+[22:17:30] I (233582) trip:   Flag fall:          775.00¢
+[22:17:30] I (233586) trip:   Distance fare:        0.00¢
+[22:17:30] I (233591) trip:   Time fare:           62.15¢
+[22:17:30] I (233595) trip:   GPS-inactive fare:    0.00¢
+[22:17:30] I (233599) trip:   Extras:               0.00¢
+[22:17:30] I (233603) trip:   Special fares:      132.00¢
+[22:17:30] I (233608) trip:   TOTAL:              969.15¢  ($9.69)
+[22:17:30] I (233613) trip: ══════════════════════════════════════
+[22:17:32] > trip info
+[22:17:32] I (235525) trip: ══════════════════════════════════════
+[22:17:32] I (235526) trip: TRIP INFO
+[22:17:32] I (235529) trip:   Local trip id:    1
+[22:17:32] I (235532) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:32] I (235539) trip:   Customer:         (none)
+[22:17:32] I (235543) trip:   Running:          yes
+[22:17:32] I (235546) trip:   Tariff:           #5 type=Maxi
+[22:17:32] I (235551) trip:   GPS active:       yes | speed=1.6 km/h
+[22:17:32] I (235556) trip:   Distance:         0.000 km
+[22:17:32] I (235560) trip:   ── Fare breakdown ──
+[22:17:32] I (235564) trip:   Flag fall:          775.00¢
+[22:17:32] I (235568) trip:   Distance fare:        0.00¢
+[22:17:32] I (235573) trip:   Time fare:           67.80¢
+[22:17:32] I (235577) trip:   GPS-inactive fare:    0.00¢
+[22:17:32] I (235581) trip:   Extras:               0.00¢
+[22:17:32] I (235585) trip:   Special fares:      132.00¢
+[22:17:32] I (235590) trip:   TOTAL:              974.80¢  ($9.75)
+[22:17:32] I (235595) trip: ══════════════════════════════════════
+[22:17:32] > gps info
+[22:17:34] > trip info
+[22:17:34] I (237548) trip: ══════════════════════════════════════
+[22:17:34] I (237549) trip: TRIP INFO
+[22:17:34] I (237552) trip:   Local trip id:    1
+[22:17:34] I (237555) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:34] I (237562) trip:   Customer:         (none)
+[22:17:34] I (237565) trip:   Running:          yes
+[22:17:34] I (237569) trip:   Tariff:           #5 type=Maxi
+[22:17:34] I (237574) trip:   GPS active:       yes | speed=0.7 km/h
+[22:17:34] I (237579) trip:   Distance:         0.000 km
+[22:17:34] I (237583) trip:   ── Fare breakdown ──
+[22:17:34] I (237587) trip:   Flag fall:          775.00¢
+[22:17:34] I (237591) trip:   Distance fare:        0.00¢
+[22:17:34] I (237596) trip:   Time fare:           73.45¢
+[22:17:34] I (237600) trip:   GPS-inactive fare:    0.00¢
+[22:17:34] I (237604) trip:   Extras:               0.00¢
+[22:17:34] I (237608) trip:   Special fares:      132.00¢
+[22:17:34] I (237613) trip:   TOTAL:              980.45¢  ($9.80)
+[22:17:34] I (237618) trip: ══════════════════════════════════════
+[22:17:36] > trip info
+[22:17:36] I (239530) trip: ══════════════════════════════════════
+[22:17:36] I (239532) trip: TRIP INFO
+[22:17:36] I (239534) trip:   Local trip id:    1
+[22:17:36] I (239537) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:36] I (239544) trip:   Customer:         (none)
+[22:17:36] I (239548) trip:   Running:          yes
+[22:17:36] I (239551) trip:   Tariff:           #5 type=Maxi
+[22:17:36] I (239556) trip:   GPS active:       yes | speed=0.7 km/h
+[22:17:36] I (239561) trip:   Distance:         0.000 km
+[22:17:36] I (239565) trip:   ── Fare breakdown ──
+[22:17:36] I (239569) trip:   Flag fall:          775.00¢
+[22:17:36] I (239573) trip:   Distance fare:        0.00¢
+[22:17:36] I (239578) trip:   Time fare:           79.10¢
+[22:17:36] I (239582) trip:   GPS-inactive fare:    0.00¢
+[22:17:36] I (239586) trip:   Extras:               0.00¢
+[22:17:36] I (239590) trip:   Special fares:      132.00¢
+[22:17:36] I (239595) trip:   TOTAL:              986.10¢  ($9.86)
+[22:17:36] I (239600) trip: ══════════════════════════════════════
+[22:17:37] > gps info
+[22:17:37] > I (240748) gps: GPS: fix OK | lat=9.8256 lon=80.2313 speed=1.4km/h sats=6 hdop=2.9 (idle — use 'gps start' for full log)
+[22:17:38] trip info
+[22:17:38] I (241543) trip: ══════════════════════════════════════
+[22:17:38] I (241544) trip: TRIP INFO
+[22:17:38] I (241547) trip:   Local trip id:    1
+[22:17:38] I (241550) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:38] I (241556) trip:   Customer:         (none)
+[22:17:38] I (241560) trip:   Running:          yes
+[22:17:38] I (241564) trip:   Tariff:           #5 type=Maxi
+[22:17:38] I (241568) trip:   GPS active:       yes | speed=1.4 km/h
+[22:17:38] I (241574) trip:   Distance:         0.000 km
+[22:17:38] I (241578) trip:   ── Fare breakdown ──
+[22:17:38] I (241582) trip:   Flag fall:          775.00¢
+[22:17:38] I (241586) trip:   Distance fare:        0.00¢
+[22:17:38] I (241590) trip:   Time fare:           84.75¢
+[22:17:38] I (241595) trip:   GPS-inactive fare:    0.00¢
+[22:17:38] I (241599) trip:   Extras:               0.00¢
+[22:17:38] I (241603) trip:   Special fares:      132.00¢
+[22:17:38] I (241607) trip:   TOTAL:              991.75¢  ($9.92)
+[22:17:38] I (241612) trip: ══════════════════════════════════════
+[22:17:40] > trip info
+[22:17:40] I (243574) trip: ══════════════════════════════════════
+[22:17:40] I (243575) trip: TRIP INFO
+[22:17:40] I (243578) trip:   Local trip id:    1
+[22:17:40] I (243581) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:40] I (243588) trip:   Customer:         (none)
+[22:17:40] I (243591) trip:   Running:          yes
+[22:17:40] I (243595) trip:   Tariff:           #5 type=Maxi
+[22:17:40] I (243600) trip:   GPS active:       yes | speed=0.5 km/h
+[22:17:40] I (243605) trip:   Distance:         0.000 km
+[22:17:40] I (243609) trip:   ── Fare breakdown ──
+[22:17:40] I (243613) trip:   Flag fall:          775.00¢
+[22:17:40] I (243617) trip:   Distance fare:        0.00¢
+[22:17:40] I (243622) trip:   Time fare:           90.40¢
+[22:17:40] I (243626) trip:   GPS-inactive fare:    0.00¢
+[22:17:40] I (243630) trip:   Extras:               0.00¢
+[22:17:40] I (243634) trip:   Special fares:      132.00¢
+[22:17:40] I (243639) trip:   TOTAL:              997.40¢  ($9.97)
+[22:17:40] I (243644) trip: ══════════════════════════════════════
+[22:17:42] > trip info
+[22:17:42] I (245555) trip: ══════════════════════════════════════
+[22:17:42] I (245557) trip: TRIP INFO
+[22:17:42] I (245559) trip:   Local trip id:    1
+[22:17:42] I (245562) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:42] I (245569) trip:   Customer:         (none)
+[22:17:42] I (245573) trip:   Running:          yes
+[22:17:42] I (245576) trip:   Tariff:           #5 type=Maxi
+[22:17:42] I (245581) trip:   GPS active:       yes | speed=0.4 km/h
+[22:17:42] I (245586) trip:   Distance:         0.000 km
+[22:17:42] I (245590) trip:   ── Fare breakdown ──
+[22:17:42] I (245594) trip:   Flag fall:          775.00¢
+[22:17:42] I (245598) trip:   Distance fare:        0.00¢
+[22:17:42] I (245603) trip:   Time fare:           96.05¢
+[22:17:42] I (245607) trip:   GPS-inactive fare:    0.00¢
+[22:17:42] I (245611) trip:   Extras:               0.00¢
+[22:17:42] I (245615) trip:   Special fares:      132.00¢
+[22:17:42] I (245620) trip:   TOTAL:             1003.05¢  ($10.03)
+[22:17:42] I (245625) trip: ══════════════════════════════════════
+[22:17:42] > gps info
+[22:17:44] > trip info
+[22:17:44] I (247578) trip: ══════════════════════════════════════
+[22:17:44] I (247579) trip: TRIP INFO
+[22:17:44] I (247582) trip:   Local trip id:    1
+[22:17:44] I (247585) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:44] I (247592) trip:   Customer:         (none)
+[22:17:44] I (247595) trip:   Running:          yes
+[22:17:44] I (247599) trip:   Tariff:           #5 type=Maxi
+[22:17:44] I (247604) trip:   GPS active:       yes | speed=0.1 km/h
+[22:17:44] I (247609) trip:   Distance:         0.000 km
+[22:17:44] I (247613) trip:   ── Fare breakdown ──
+[22:17:44] I (247617) trip:   Flag fall:          775.00¢
+[22:17:44] I (247621) trip:   Distance fare:        0.00¢
+[22:17:44] I (247626) trip:   Time fare:          101.70¢
+[22:17:44] I (247630) trip:   GPS-inactive fare:    0.00¢
+[22:17:44] I (247634) trip:   Extras:               0.00¢
+[22:17:44] I (247638) trip:   Special fares:      132.00¢
+[22:17:44] I (247643) trip:   TOTAL:             1008.70¢  ($10.09)
+[22:17:44] I (247648) trip: ══════════════════════════════════════
+[22:17:46] > trip info
+[22:17:46] I (249609) trip: ══════════════════════════════════════
+[22:17:46] I (249610) trip: TRIP INFO
+[22:17:46] I (249613) trip:   Local trip id:    1
+[22:17:46] I (249616) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:46] I (249623) trip:   Customer:         (none)
+[22:17:46] I (249626) trip:   Running:          yes
+[22:17:46] I (249630) trip:   Tariff:           #5 type=Maxi
+[22:17:46] I (249635) trip:   GPS active:       yes | speed=1.1 km/h
+[22:17:46] I (249640) trip:   Distance:         0.000 km
+[22:17:46] I (249644) trip:   ── Fare breakdown ──
+[22:17:46] I (249648) trip:   Flag fall:          775.00¢
+[22:17:46] I (249652) trip:   Distance fare:        0.00¢
+[22:17:46] I (249657) trip:   Time fare:          107.35¢
+[22:17:46] I (249661) trip:   GPS-inactive fare:    0.00¢
+[22:17:46] I (249665) trip:   Extras:               0.00¢
+[22:17:46] I (249669) trip:   Special fares:      132.00¢
+[22:17:46] I (249674) trip:   TOTAL:             1014.35¢  ($10.14)
+[22:17:46] I (249679) trip: ══════════════════════════════════════
+[22:17:47] > gps info
+[22:17:48] > trip info
+[22:17:48] I (251620) trip: ══════════════════════════════════════
+[22:17:48] I (251622) trip: TRIP INFO
+[22:17:48] I (251624) trip:   Local trip id:    1
+[22:17:48] I (251627) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:48] I (251634) trip:   Customer:         (none)
+[22:17:48] I (251638) trip:   Running:          yes
+[22:17:48] I (251641) trip:   Tariff:           #5 type=Maxi
+[22:17:48] I (251646) trip:   GPS active:       yes | speed=1.3 km/h
+[22:17:48] I (251651) trip:   Distance:         0.000 km
+[22:17:48] I (251655) trip:   ── Fare breakdown ──
+[22:17:48] I (251659) trip:   Flag fall:          775.00¢
+[22:17:48] I (251663) trip:   Distance fare:        0.00¢
+[22:17:48] I (251668) trip:   Time fare:          113.00¢
+[22:17:48] I (251672) trip:   GPS-inactive fare:    0.00¢
+[22:17:48] I (251676) trip:   Extras:               0.00¢
+[22:17:48] I (251680) trip:   Special fares:      132.00¢
+[22:17:48] I (251685) trip:   TOTAL:             1020.00¢  ($10.20)
+[22:17:48] I (251690) trip: ══════════════════════════════════════
+[22:17:50] > trip info
+[22:17:50] I (253601) trip: ══════════════════════════════════════
+[22:17:50] I (253602) trip: TRIP INFO
+[22:17:50] I (253605) trip:   Local trip id:    1
+[22:17:50] I (253608) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:50] I (253615) trip:   Customer:         (none)
+[22:17:50] I (253618) trip:   Running:          yes
+[22:17:50] I (253622) trip:   Tariff:           #5 type=Maxi
+[22:17:50] I (253627) trip:   GPS active:       yes | speed=1.3 km/h
+[22:17:50] I (253632) trip:   Distance:         0.000 km
+[22:17:50] I (253636) trip:   ── Fare breakdown ──
+[22:17:50] I (253640) trip:   Flag fall:          775.00¢
+[22:17:50] I (253644) trip:   Distance fare:        0.00¢
+[22:17:50] I (253649) trip:   Time fare:          118.65¢
+[22:17:50] I (253653) trip:   GPS-inactive fare:    0.00¢
+[22:17:50] I (253657) trip:   Extras:               0.00¢
+[22:17:50] I (253661) trip:   Special fares:      132.00¢
+[22:17:50] I (253666) trip:   TOTAL:             1025.65¢  ($10.26)
+[22:17:50] I (253671) trip: ══════════════════════════════════════
+[22:17:52] > trip info
+[22:17:52] I (255632) trip: ══════════════════════════════════════
+[22:17:52] I (255634) trip: TRIP INFO
+[22:17:52] I (255636) trip:   Local trip id:    1
+[22:17:52] I (255639) trip:   Server job id:    0 (not synced — doc 81 phase 5)
+[22:17:52] I (255646) trip:   Customer:         (none)
+[22:17:52] I (255650) trip:   Running:          yes
+[22:17:52] I (255653) trip:   Tariff:           #5 type=Maxi
+[22:17:52] I (255658) trip:   GPS active:       yes | speed=1.9 km/h
+[22:17:52] I (255663) trip:   Distance:         0.000 km
+[22:17:52] I (255667) trip:   ── Fare breakdown ──

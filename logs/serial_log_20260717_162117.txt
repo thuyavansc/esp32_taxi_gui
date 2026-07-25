@@ -1,0 +1,1 @@
+[16:21:17] [gui] Logging started (TXT) → logs/serial_log_20260717_162117.txt

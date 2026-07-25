@@ -1,0 +1,394 @@
+[18:28:18] [gui] Logging started (TXT) → logs/serial_log_20260717_182818.txt
+[18:28:21] [gui] Connected to COM8 @ 115200 baud
+[18:28:21] ets Jul 29 2019 12:21:46
+[18:28:21] rst:0x1 (POWERON_RESET),boot:0x12 (SPI_FAST_FLASH_BOOT)
+[18:28:21] configsip: 0, SPIWP:0xee
+[18:28:21] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[18:28:21] mode:DIO, clock div:2
+[18:28:21] load:0x3fff0030,len:6280
+[18:28:21] load:0x40078000,len:15864
+[18:28:21] load:0x40080400,len:3920
+[18:28:21] entry 0x4008063c
+[18:28:21] I (27) boot: ESP-IDF 5.5.3 2nd stage bootloader
+[18:28:21] I (27) boot: compile time Jul 16 2026 18:00:21
+[18:28:21] I (27) boot: Multicore bootloader
+[18:28:21] I (29) boot: chip revision: v3.1
+[18:28:21] I (31) boot.esp32: SPI Speed      : 40MHz
+[18:28:21] I (35) boot.esp32: SPI Mode       : DIO
+[18:28:21] I (39) boot.esp32: SPI Flash Size : 4MB
+[18:28:21] I (42) boot: Enabling RNG early entropy source...
+[18:28:21] I (47) boot: Partition Table:
+[18:28:21] I (49) boot: ## Label            Usage          Type ST Offset   Length
+[18:28:21] I (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+[18:28:21] I (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+[18:28:21] I (69) boot:  2 factory          factory app      00 00 00010000 00180000
+[18:28:21] I (75) boot:  3 storage          Unknown data     01 82 00190000 00270000
+[18:28:21] I (82) boot: End of partition table
+[18:28:21] I (85) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=38630h (230960) map
+[18:28:22] I (172) esp_image: segment 1: paddr=00048658 vaddr=3ffb0000 size=0446ch ( 17516) load
+[18:28:22] I (178) esp_image: segment 2: paddr=0004cacc vaddr=40080000 size=0354ch ( 13644) load
+[18:28:22] I (184) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=ba5d0h (763344) map
+[18:28:22] I (445) esp_image: segment 4: paddr=0010a5f8 vaddr=4008354c size=15a30h ( 88624) load
+[18:28:22] I (480) esp_image: segment 5: paddr=00120030 vaddr=50000000 size=00020h (    32) load
+[18:28:22] I (492) boot: Loaded app from partition at offset 0x10000
+[18:28:22] I (492) boot: Disabling RNG early entropy source...
+[18:28:22] I (503) cpu_start: Multicore app
+[18:28:22] I (511) cpu_start: GPIO 3 and 1 are used as console UART I/O pins
+[18:28:22] I (511) cpu_start: Pro cpu start user code
+[18:28:22] I (511) cpu_start: cpu freq: 160000000 Hz
+[18:28:22] I (513) app_init: Application information:
+[18:28:22] I (517) app_init: Project name:     esp32_display_taxi_meter
+[18:28:22] I (522) app_init: App version:      0e0b7e1-dirty
+[18:28:22] I (527) app_init: Compile time:     Jul 16 2026 17:52:26
+[18:28:22] I (532) app_init: ELF file SHA256:  c754441d2...
+[18:28:22] I (536) app_init: ESP-IDF:          5.5.3
+[18:28:22] I (540) efuse_init: Min chip rev:     v0.0
+[18:28:22] I (544) efuse_init: Max chip rev:     v3.99 
+[18:28:22] I (548) efuse_init: Chip rev:         v3.1
+[18:28:22] I (552) heap_init: Initializing. RAM available for dynamic allocation:
+[18:28:22] I (558) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+[18:28:22] I (563) heap_init: At 3FFBAF90 len 00025070 (148 KiB): DRAM
+[18:28:22] I (568) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+[18:28:22] I (573) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+[18:28:22] I (579) heap_init: At 40098F7C len 00007084 (28 KiB): IRAM
+[18:28:22] I (586) spi_flash: detected chip: generic
+[18:28:22] I (588) spi_flash: flash io: dio
+[18:28:22] I (592) main_task: Started on CPU0
+[18:28:22] I (595) main_task: Calling app_main()
+[18:28:22] I (597) app: ╔══════════════════════════════════════╗
+[18:28:22] I (609) app: ║  TaxiMeter Display + Backend          ║
+[18:28:22] I (614) app: ║  3.5" Capacitive Touch LCD            ║
+[18:28:22] I (619) app: ║  ST7796S + FT6336U + LVGL 8.3         ║
+[18:28:22] I (624) app: ╚══════════════════════════════════════╝
+[18:28:22] I (674) session: Session store loaded from NVS (namespace 'session')
+[18:28:22] I (675) bgworker: Background worker task started (persistent, one-time stack allocation)
+[18:28:22] I (682) wifi:wifi driver task: 3ffc6540, prio:23, stack:6656, core=0
+[18:28:22] I (698) wifi:wifi firmware version: 4df78f2
+[18:28:22] I (698) wifi:wifi certification version: v7.0
+[18:28:22] I (699) wifi:config NVS flash: enabled
+[18:28:22] I (699) wifi:config nano formatting: disabled
+[18:28:22] I (703) wifi:Init data frame dynamic rx buffer num: 16
+[18:28:22] I (708) wifi:Init static rx mgmt buffer num: 5
+[18:28:22] I (712) wifi:Init management short buffer num: 32
+[18:28:22] I (716) wifi:Init dynamic tx buffer num: 32
+[18:28:22] I (720) wifi:Init static rx buffer size: 1600
+[18:28:22] I (724) wifi:Init static rx buffer num: 6
+[18:28:22] I (728) wifi:Init dynamic rx buffer num: 16
+[18:28:22] I (733) wifi_init: rx ba win: 6
+[18:28:22] I (735) wifi_init: accept mbox: 6
+[18:28:22] I (738) wifi_init: tcpip mbox: 32
+[18:28:22] I (741) wifi_init: udp mbox: 6
+[18:28:22] I (743) wifi_init: tcp mbox: 6
+[18:28:22] I (746) wifi_init: tcp tx win: 5760
+[18:28:22] I (749) wifi_init: tcp rx win: 5760
+[18:28:22] I (753) wifi_init: tcp mss: 1440
+[18:28:22] I (756) wifi_init: WiFi IRAM OP enabled
+[18:28:22] I (759) wifi_init: WiFi RX IRAM OP enabled
+[18:28:22] W (764) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[18:28:22] I (772) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06
+[18:28:22] I (861) wifi:mode : sta (88:f1:55:32:58:2c)
+[18:28:22] I (862) wifi:enable tsf
+[18:28:22] I (864) app: WiFi init — connecting to: Mobitel 4G-489E
+[18:28:22] I (865) app: Waiting for WiFi...
+[18:28:22] I (876) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0
+[18:28:22] I (878) wifi:state: init -> auth (0xb0)
+[18:28:22] I (884) wifi:state: auth -> assoc (0x0)
+[18:28:22] I (891) wifi:state: assoc -> run (0x10)
+[18:28:22] I (916) wifi:connected with Mobitel 4G-489E, aid = 4, channel 8, BW20, bssid = 1c:13:86:d6:48:9e
+[18:28:22] I (917) wifi:security: WPA2-PSK, phy: bgn, rssi: -73
+[18:28:22] I (922) wifi:pm start, type: 1
+[18:28:22] I (923) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[18:28:22] I (1011) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[18:28:23] I (2002) esp_netif_handlers: sta ip: 192.168.8.135, mask: 255.255.255.0, gw: 192.168.8.1
+[18:28:23] I (2003) app: WiFi connected — IP: 192.168.8.135
+[18:28:24] I (2705) app: NTP sync: FAILED
+[18:28:24] I (2705) app: Display/touch/UI SKIPPED — headless build (ENABLE_DISPLAY=0 in main/CMakeLists.txt).
+[18:28:24] I (2706) app:   All business logic (auth/setup/ref/duty/trip/GPS) is unaffected — drive it via the
+[18:28:24] I (2714) app:   serial commands below or the Processing GUI. See doc 87 for how to switch this back on.
+[18:28:24] I (2724) trips_api: ══════════════════════════════════════
+[18:28:24] I (2735) trips_api: TRIPS REST API + JSON Storage Init
+[18:28:24] I (2740) trips_api:   API: https://mytaxis.softclient.com.au/taxis-api/api/Trips/{id}
+[18:28:24] I (2748) trips_api:   Default trip ID: 12772
+[18:28:24] I (2753) trips_api:   Storage backend: 2
+[18:28:24] I (3022) trips_api: Created storage directory: /spiffs/store
+[18:28:24] I (3022) trips_api: SPIFFS partition: 2287 KB total | 0 KB used | 2287 KB free
+[18:28:24] I (3023) trips_api: Storage Backend: SPIFFS (Flash, Permanent) ✓
+[18:28:24] I (3029) trips_api: Serial command reader STARTED
+[18:28:24] I (3034) trips_api: Type 'help' for all command prefixes (setup/auth/ref/duty/trip/session/mem/store/...).
+[18:28:24] > gps infoI (3044) gps: ══════════════════════════════════════
+[18:28:24] I (3055) trips_api: TRIPS API Storage — READY ✓
+[18:28:24] > I (3109) trips_api: Type 'api help' for available commands.
+[18:28:24] I (3115) trips_api: ══════════════════════════════════════
+[18:28:25] W (3371) refdata:   '/spiffs/store/ref/tariffs.json' not found (never fetched yet?)
+[18:28:25] I (3372) refdata: Reference data module ready (call 'ref fetch' or go on-duty to load data)
+[18:28:25] I (3376) trip: Trip manager ready — fare-calc tick task started (every 2000ms)
+[18:28:25] I (3383) app: READY — headless (no display) ✓
+[18:28:25] I (3387) app: ══════════════════════════════════════
+[18:28:26] gps infoI (5060) gps: ══════════════════════════════════════
+[18:28:31] > gps infoI (10061) gps: ══════════════════════════════════════
+[18:28:36] > gps infoI (15063) gps: ══════════════════════════════════════
+[18:28:41] > gps infoI (20065) gps: ══════════════════════════════════════
+[18:28:46] > gps infoI (25067) gps: ══════════════════════════════════════
+[18:28:51] > gps infoI (30069) gps: ══════════════════════════════════════
+[18:28:52] > I (30645) gps: GPS: no fix | reads=168 (idle — waiting for satellites)
+[18:28:56] gps infoI (35121) gps: ══════════════════════════════════════
+[18:29:01] > gps infoI (40123) gps: ══════════════════════════════════════
+[18:29:06] > gps infoI (45125) gps: ══════════════════════════════════════
+[18:29:11] > gps infoI (50127) gps: ══════════════════════════════════════
+[18:29:16] > gps infoI (55129) gps: ══════════════════════════════════════
+[18:29:21] > gps infoI (60131) gps: ══════════════════════════════════════
+[18:29:22] > I (60646) gps: GPS: no fix | reads=348 (idle — waiting for satellites)
+[18:29:26] > setup info
+[18:29:26] setup infoI (65033) setup: network_id=2 vehicle_id=105 vehicle_type_id=4 vehicle_no=Tu001
+[18:29:26] > gps infoI (65134) gps: ══════════════════════════════════════
+[18:29:31] > gps infoI (70137) gps: ══════════════════════════════════════
+[18:29:37] > gps infoI (75189) gps: ══════════════════════════════════════
+[18:29:42] > gps infoI (80191) gps: ══════════════════════════════════════
+[18:29:47] > gps infoI (85193) gps: ══════════════════════════════════════
+[18:29:52] > gps infoI (90195) gps: ══════════════════════════════════════
+[18:29:52] > I (90647) gps: GPS: no fix | reads=528 (idle — waiting for satellites)
+[18:29:56] > setup network PBI8ZLOC
+[18:29:56] setup network PBI8ZLOCI (94498) setup: ══════════════════════════════════════
+[18:29:56] I (94498) setup: setup network: queued on background worker
+[18:29:56] I (94501) setup: NETWORK LOOKUP — passcode=PBI8ZLOC
+[18:29:56] > I (94513) api_client: → GET /devices-api/api/DevicePublic/Network?passcode=PBI8ZLOC
+[18:29:56] I (94519) api_client:   Heap before perform()       free=182 KB | largest free block=108 KB
+[18:29:57] gps infoI (95212) gps: ══════════════════════════════════════
+[18:29:58] > I (97135) esp-x509-crt-bundle: Certificate validated
+[18:30:00] I (98617) api_client:   Heap after perform()        free=164 KB | largest free block=108 KB
+[18:30:00] I (98618) api_client: ← HTTP 200 (GET /devices-api/api/DevicePublic/Network?passcode=PBI8ZLOC)
+[18:30:00] I (98630) setup: NETWORK OK ✓ — network_id=2 company="Softclient" active=yes
+[18:30:00] I (98631) setup: ══════════════════════════════════════
+[18:30:00] I (98642) bgworker: Job finished: OK
+[18:30:02] gps infoI (100267) gps: ══════════════════════════════════════
+[18:30:05] > setup vehicle Tu001
+[18:30:05] > setup vehicle Tu001I (103671) setup: ══════════════════════════════════════
+[18:30:05] I (103671) setup: setup vehicle: queued on background worker
+[18:30:05] I (103674) setup: VEHICLE LOOKUP — networkId=2 vehicleNo=Tu001
+[18:30:05] > I (103687) api_client: → GET /devices-api/api/DevicePublic/Vehicle?networkId=2&vehicleNo=Tu001
+[18:30:05] I (103694) api_client:   Heap before perform()       free=181 KB | largest free block=108 KB
+[18:30:06] I (105042) esp-x509-crt-bundle: Certificate validated
+[18:30:07] gps infoI (105237) gps: ══════════════════════════════════════
+[18:30:08] > I (106252) api_client:   Heap after perform()        free=163 KB | largest free block=108 KB
+[18:30:08] I (106253) api_client: ← HTTP 200 (GET /devices-api/api/DevicePublic/Vehicle?networkId=2&vehicleNo=Tu001)
+[18:30:08] I (106267) setup: VEHICLE OK ✓ — vehicle_id=105 vehicle_type_id=4 active=yes
+[18:30:08] I (106268) setup: ══════════════════════════════════════
+[18:30:08] I (106278) bgworker: Job finished: OK
+[18:30:08] I (106300) wifi:<ba-add>idx:0 (ifx:0, 1c:13:86:d6:48:9e), tid:0, ssn:21, winSize:64
+[18:30:10] > setup info
+[18:30:10] setup infoI (108440) setup: network_id=2 vehicle_id=105 vehicle_type_id=4 vehicle_no=Tu001
+[18:30:12] > gps infoI (110291) gps: ══════════════════════════════════════
+[18:30:17] > gps infoI (115294) gps: ══════════════════════════════════════
+[18:30:22] > gps infoI (120297) gps: ══════════════════════════════════════
+[18:30:22] > I (120649) gps: GPS: no fix | reads=708 (idle — waiting for satellites)
+[18:30:27] gps infoI (125300) gps: ══════════════════════════════════════
+[18:30:27] > auth login 12345 12345
+[18:30:27] > auth login 12345 12345I (125404) auth: auth login: queued on background worker — watch below for LOGIN OK/FAILED
+[18:30:27] > I (125405) auth: ══════════════════════════════════════
+[18:30:27] I (125415) auth: LOGIN — user=12345 mac=88:F1:55:32:58:2C
+[18:30:27] I (125422) api_client: → POST /taxis-api/api/Authentications/Login
+[18:30:27] I (125427) api_client:   Heap before perform()       free=181 KB | largest free block=108 KB
+[18:30:29] I (127962) esp-x509-crt-bundle: Certificate validated
+[18:30:31] I (129560) api_client:   Heap after perform()        free=162 KB | largest free block=108 KB
+[18:30:31] I (129561) api_client: ← HTTP 200 (POST /taxis-api/api/Authentications/Login)
+[18:30:31] E (129578) auth:   JWT decode: payload segment size (540) out of expected range
+[18:30:31] W (129579) auth:   Could not decode access-token expiry from JWT — token will be treated as expired
+[18:30:31] W (129584) auth:   until a fresh login; API calls may fail with 401 until then.
+[18:30:31] I (129594) auth: LOGIN OK ✓ — driver_id=130 vehicle_id=0 vehicle_type_id=0
+[18:30:31] I (129600) api_client: → GET /taxis-api/api/Driver
+[18:30:31] I (129603) api_client:   Heap before perform()       free=180 KB | largest free block=108 KB
+[18:30:32] gps infoI (130308) gps: ══════════════════════════════════════
+[18:30:32] > I (130980) esp-x509-crt-bundle: Certificate validated
+[18:30:33] E (131968) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:30:33] E (131972) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:30:37] gps infoI (135312) gps: ══════════════════════════════════════
+[18:30:41] > auth info
+[18:30:41] > auth infoI (139265) auth: Logged in: no | Access token valid: no
+[18:30:41] I (139266) session: ══════════════════════════════════════
+[18:30:41] I (139272) session: SESSION STORE (NVS namespace 'session')
+[18:30:41] I (139277) session: ──────────────────────────────────────
+[18:30:41] I (139289) session:   Access token:     SET (511 chars) — EXPIRED/UNKNOWN
+[18:30:41] I (139296) session:   Refresh token:    SET (68 chars)
+[18:30:41] I (139301) session:   Access expiry:    0 (epoch)
+[18:30:41] I (139305) session:   Refresh expiry:   1784552432 (epoch)
+[18:30:41] I (139310) session:   Driver:           id=130 no=12345 name=
+[18:30:41] I (139316) session:   Vehicle:          id=0 type_id=0 no=Tu001
+[18:30:41] I (139322) session:   Network:          id=2 company=Softclient
+[18:30:41] I (139327) session:   Tariff type:      (not set)
+[18:30:41] I (139332) session:   Duty status:      ON DUTY
+[18:30:41] I (139336) session:   Active trip:      local_id=0 server_job_id=0
+[18:30:41] I (139342) session:   Next local trip#: 1
+[18:30:41] I (139346) session: ══════════════════════════════════════
+[18:30:42] > gps infoI (140308) gps: ══════════════════════════════════════
+[18:30:46] > E (144803) esp-tls-mbedtls: read error :-0x0050
+[18:30:46] E (144804) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[18:30:46] E (144804) api_client:   HTTP transport error event
+[18:30:46] I (144809) api_client:   Heap after perform()        free=162 KB | largest free block=108 KB
+[18:30:46] E (144817) api_client: ✗ GET /taxis-api/api/Driver FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[18:30:46] W (144828) auth:   Driver profile fetch failed — continuing without a display name
+[18:30:46] I (144833) auth: ══════════════════════════════════════
+[18:30:46] I (144845) bgworker: Job finished: OK
+[18:30:47] gps infoI (145311) gps: ══════════════════════════════════════
+[18:30:48] > duty on
+[18:30:48] > duty onI (146365) duty: ON DUTY (local status updated immediately)
+[18:30:48] > I (146368) api_client: → GET /taxis-api/api/DriverStatus/OnDuty
+[18:30:48] I (146368) api_client:   Heap before perform()       free=182 KB | largest free block=108 KB
+[18:30:49] I (147767) esp-x509-crt-bundle: Certificate validated
+[18:30:50] E (149098) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:30:50] E (149103) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:30:52] gps infoI (150366) gps: ══════════════════════════════════════
+[18:30:52] > I (150652) gps: GPS: no fix | reads=888 (idle — waiting for satellites)
+[18:30:57] gps infoI (155369) gps: ══════════════════════════════════════
+[18:31:00] > ref fetch
+[18:31:00] > ref fetchI (159022) refdata: ref fetch: queued on background worker — watch below for progress
+[18:31:02] > gps infoI (160373) gps: ══════════════════════════════════════
+[18:31:03] > E (161593) esp-tls-mbedtls: read error :-0x0050
+[18:31:03] E (161594) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[18:31:03] E (161594) api_client:   HTTP transport error event
+[18:31:03] I (161599) api_client:   Heap after perform()        free=165 KB | largest free block=108 KB
+[18:31:03] E (161607) api_client: ✗ GET /taxis-api/api/DriverStatus/OnDuty FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[18:31:03] I (161619) duty:   OnDuty API call: failed to reach server (HTTP -1) — result is informational only, never blocks the driver
+[18:31:03] I (161628) bgworker: Job finished: OK
+[18:31:03] I (161631) refdata: ══════════════════════════════════════
+[18:31:03] I (161643) refdata: REFERENCE DATA — fetching all 4 categories
+[18:31:03] E (161649) refdata: tariffs: no vehicle_type_id in session — run 'setup vehicle' / login first
+[18:31:03] I (161911) api_client: → GET /taxis-api/api/FixedFares
+[18:31:03] I (161912) api_client:   Heap before perform()       free=182 KB | largest free block=108 KB
+[18:31:05] I (163634) esp-x509-crt-bundle: Certificate validated
+[18:31:06] E (164618) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:31:06] E (164621) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:31:07] gps infoI (165379) gps: ══════════════════════════════════════
+[18:31:12] > gps infoI (170382) gps: ══════════════════════════════════════
+[18:31:17] > gps infoI (175385) gps: ══════════════════════════════════════
+[18:31:18] > E (177154) esp-tls-mbedtls: read error :-0x0050
+[18:31:18] E (177155) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[18:31:18] E (177156) api_client:   HTTP transport error event
+[18:31:19] I (177160) api_client:   Heap after perform()        free=165 KB | largest free block=108 KB
+[18:31:19] E (177168) api_client: ✗ GET /taxis-api/api/FixedFares FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[18:31:19] W (177181) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/fixed_rates.json
+[18:31:19] E (177186) refdata: fixed_rates: fetch failed (HTTP -1)
+[18:31:19] I (177442) api_client: → GET /taxis-api/api/SpecialFare
+[18:31:19] I (177443) api_client:   Heap before perform()       free=182 KB | largest free block=108 KB
+[18:31:20] I (178902) esp-x509-crt-bundle: Certificate validated
+[18:31:21] E (179869) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:31:21] E (179874) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:31:22] gps infoI (180390) gps: ══════════════════════════════════════
+[18:31:22] > I (180654) gps: GPS: no fix | reads=1068 (idle — waiting for satellites)
+[18:31:27] gps infoI (185393) gps: ══════════════════════════════════════
+[18:31:32] > gps infoI (190396) gps: ══════════════════════════════════════
+[18:31:34] > E (192725) esp-tls-mbedtls: read error :-0x0050
+[18:31:34] E (192726) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[18:31:34] E (192726) api_client:   HTTP transport error event
+[18:31:34] I (192731) api_client:   Heap after perform()        free=165 KB | largest free block=108 KB
+[18:31:34] E (192739) api_client: ✗ GET /taxis-api/api/SpecialFare FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[18:31:34] W (192752) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/special_fares.json
+[18:31:34] E (192757) refdata: special_fares: fetch failed (HTTP -1)
+[18:31:34] I (193014) api_client: → GET /devices-api/api/PublicHolidays
+[18:31:34] I (193015) api_client:   Heap before perform()       free=182 KB | largest free block=108 KB
+[18:31:37] gps infoI (195402) gps: ══════════════════════════════════════
+[18:31:37] > I (195545) esp-x509-crt-bundle: Certificate validated
+[18:31:38] E (196580) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:31:38] E (196584) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:31:42] gps infoI (200406) gps: ══════════════════════════════════════
+[18:31:47] > gps infoI (205410) gps: ══════════════════════════════════════
+[18:31:51] > E (209316) esp-tls-mbedtls: read error :-0x0050
+[18:31:51] E (209317) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[18:31:51] E (209317) api_client:   HTTP transport error event
+[18:31:51] I (209322) api_client:   Heap after perform()        free=165 KB | largest free block=108 KB
+[18:31:51] E (209330) api_client: ✗ GET /devices-api/api/PublicHolidays FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[18:31:51] W (209344) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/public_holidays.json
+[18:31:51] E (209349) refdata: public_holidays: fetch failed (HTTP -1)
+[18:31:51] W (209354) refdata: REFERENCE DATA — one or more categories failed (see above). Continuing with
+[18:31:51] W (209363) refdata:   whatever was already loaded/cached for the categories that did fail.
+[18:31:51] I (209371) refdata: ══════════════════════════════════════
+[18:31:51] I (209383) bgworker: Job finished: OK
+[18:31:51] I (209386) refdata: ══════════════════════════════════════
+[18:31:51] I (209398) refdata: REFERENCE DATA — fetching all 4 categories
+[18:31:51] E (209404) refdata: tariffs: no vehicle_type_id in session — run 'setup vehicle' / login first
+[18:31:51] I (209664) api_client: → GET /taxis-api/api/FixedFares
+[18:31:51] I (209665) api_client:   Heap before perform()       free=182 KB | largest free block=108 KB
+[18:31:52] gps infoI (210417) gps: ══════════════════════════════════════
+[18:31:52] > I (210654) gps: GPS: no fix | reads=1248 (idle — waiting for satellites)
+[18:31:52] I (211011) esp-x509-crt-bundle: Certificate validated
+[18:31:53] E (212081) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:31:53] E (212086) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:31:57] gps infoI (215470) gps: ══════════════════════════════════════
+[18:32:02] > gps infoI (220473) gps: ══════════════════════════════════════
+[18:32:06] > E (224777) esp-tls-mbedtls: read error :-0x0050
+[18:32:06] E (224778) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[18:32:06] E (224778) api_client:   HTTP transport error event
+[18:32:06] I (224783) api_client:   Heap after perform()        free=165 KB | largest free block=108 KB
+[18:32:06] E (224791) api_client: ✗ GET /taxis-api/api/FixedFares FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[18:32:06] W (224804) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/fixed_rates.json
+[18:32:06] E (224809) refdata: fixed_rates: fetch failed (HTTP -1)
+[18:32:06] I (225066) api_client: → GET /taxis-api/api/SpecialFare
+[18:32:06] I (225067) api_client:   Heap before perform()       free=182 KB | largest free block=108 KB
+[18:32:07] gps infoI (225482) gps: ══════════════════════════════════════
+[18:32:09] > I (227538) esp-x509-crt-bundle: Certificate validated
+[18:32:10] E (228976) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:32:10] E (228981) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:32:12] gps infoI (230486) gps: ══════════════════════════════════════
+[18:32:13] > ref list tariffs
+[18:32:13] > ref list tariffs
+[18:32:13] #    num    name                 type     flagfall   distR1   distR2  distRng  start    end fD-tD PH
+[18:32:13] (0 rows)
+[18:32:17] > gps infoI (235490) gps: ══════════════════════════════════════
+[18:32:17] > ref list fixedrates
+[18:32:18] > ref list fixedrates
+[18:32:18] #      name                     from             to                     fare active
+[18:32:18] (0 rows)
+[18:32:19] > ref list specialfares
+[18:32:19] > ref list specialfares
+[18:32:19] #      code         name                           fare typeName  
+[18:32:19] (0 rows)
+[18:32:21] > ref list holidays
+[18:32:21] > ref list holidays
+[18:32:21] #      date       name
+[18:32:21] (0 rows)
+[18:32:22] > gps infoI (240496) gps: ══════════════════════════════════════
+[18:32:22] > I (240658) gps: GPS: no fix | reads=1428 (idle — waiting for satellites)
+[18:32:22] > ref info
+[18:32:23] ref infoI (241199) refdata: tariffs=0 fixed_rates=0 special_fares=0 holidays=0 | last_fetch_all=-1s ago
+[18:32:23] > E (241368) esp-tls-mbedtls: read error :-0x0050
+[18:32:23] E (241369) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[18:32:23] E (241369) api_client:   HTTP transport error event
+[18:32:23] I (241374) api_client:   Heap after perform()        free=165 KB | largest free block=108 KB
+[18:32:23] E (241382) api_client: ✗ GET /taxis-api/api/SpecialFare FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[18:32:23] W (241395) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/special_fares.json
+[18:32:23] E (241400) refdata: special_fares: fetch failed (HTTP -1)
+[18:32:23] I (241658) api_client: → GET /devices-api/api/PublicHolidays
+[18:32:23] I (241659) api_client:   Heap before perform()       free=182 KB | largest free block=108 KB
+[18:32:25] I (244083) esp-x509-crt-bundle: Certificate validated
+[18:32:26] E (245162) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:32:26] E (245167) HTTP_HEADER: Buffer length is small to fit all the headers
+[18:32:27] gps infoI (245503) gps: ══════════════════════════════════════
+[18:32:32] > gps infoI (250506) gps: ══════════════════════════════════════
+[18:32:34] > session info
+[18:32:34] > session infoI (252759) session: ══════════════════════════════════════
+[18:32:34] I (252762) session: SESSION STORE (NVS namespace 'session')
+[18:32:34] I (252767) session: ──────────────────────────────────────
+[18:32:34] I (252779) session:   Access token:     SET (511 chars) — EXPIRED/UNKNOWN
+[18:32:34] I (252785) session:   Refresh token:    SET (68 chars)
+[18:32:34] I (252790) session:   Access expiry:    0 (epoch)
+[18:32:34] I (252795) session:   Refresh expiry:   1784552432 (epoch)
+[18:32:34] I (252800) session:   Driver:           id=130 no=12345 name=
+[18:32:34] I (252805) session:   Vehicle:          id=0 type_id=0 no=Tu001
+[18:32:34] I (252811) session:   Network:          id=2 company=Softclient
+[18:32:34] I (252817) session:   Tariff type:      (not set)
+[18:32:34] I (252821) session:   Duty status:      ON DUTY
+[18:32:34] I (252825) session:   Active trip:      local_id=0 server_job_id=0
+[18:32:34] I (252831) session:   Next local trip#: 1
+[18:32:34] I (252835) session: ══════════════════════════════════════
+[18:32:37] > gps infoI (255547) gps: ══════════════════════════════════════
+[18:32:39] > E (257959) esp-tls-mbedtls: read error :-0x0050
+[18:32:39] E (257959) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[18:32:39] E (257960) api_client:   HTTP transport error event
+[18:32:39] I (257965) api_client:   Heap after perform()        free=165 KB | largest free block=108 KB
+[18:32:39] E (257973) api_client: ✗ GET /devices-api/api/PublicHolidays FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[18:32:39] W (257987) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/public_holidays.json
+[18:32:39] E (257991) refdata: public_holidays: fetch failed (HTTP -1)
+[18:32:39] W (257997) refdata: REFERENCE DATA — one or more categories failed (see above). Continuing with
+[18:32:39] W (258005) refdata:   whatever was already loaded/cached for the categories that did fail.
+[18:32:39] I (258013) refdata: ══════════════════════════════════════
+[18:32:39] I (258025) bgworker: Job finished: FAILED
+[18:32:42] gps infoI (260550) gps: ══════════════════════════════════════

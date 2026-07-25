@@ -1,0 +1,166 @@
+[19:18:55] [gui] Logging started (TXT) → logs/serial_log_20260717_191855.txt
+[19:18:57] > gps infoI (130526) gps: ══════════════════════════════════════
+[19:18:57] > setup network PBI8ZLOC
+[19:18:57] > setup network PBI8ZLOCI (130658) setup: ══════════════════════════════════════
+[19:18:57] I (130658) setup: setup network: queued on background worker
+[19:18:57] I (130661) setup: NETWORK LOOKUP — passcode=PBI8ZLOC
+[19:18:57] > I (130673) api_client: → GET /devices-api/api/DevicePublic/Network?passcode=PBI8ZLOC
+[19:18:57] I (130679) api_client:   Heap before perform()       free=180 KB | largest free block=108 KB
+[19:18:59] I (132150) esp-x509-crt-bundle: Certificate validated
+[19:19:00] I (133390) api_client:   Heap after perform()        free=163 KB | largest free block=108 KB
+[19:19:00] I (133391) api_client: ← HTTP 200 (GET /devices-api/api/DevicePublic/Network?passcode=PBI8ZLOC)
+[19:19:00] I (133402) setup: NETWORK OK ✓ — network_id=2 company="Softclient" active=yes
+[19:19:00] I (133404) setup: ══════════════════════════════════════
+[19:19:00] I (133415) bgworker: Job finished: OK
+[19:19:02] gps infoI (135575) gps: ══════════════════════════════════════
+[19:19:07] > setup vehicle Tu001
+[19:19:07] > gps infoI (140606) gps: ══════════════════════════════════════
+[19:19:07] > setup vehicle Tu001I (140688) setup: ══════════════════════════════════════
+[19:19:07] I (140689) setup: setup vehicle: queued on background worker
+[19:19:07] I (140700) setup: VEHICLE LOOKUP — networkId=2 vehicleNo=Tu001
+[19:19:07] > I (140713) api_client: → GET /devices-api/api/DevicePublic/Vehicle?networkId=2&vehicleNo=Tu001
+[19:19:07] I (140720) api_client:   Heap before perform()       free=180 KB | largest free block=108 KB
+[19:19:09] I (142077) esp-x509-crt-bundle: Certificate validated
+[19:19:10] I (143733) api_client:   Heap after perform()        free=162 KB | largest free block=108 KB
+[19:19:10] I (143734) api_client: ← HTTP 200 (GET /devices-api/api/DevicePublic/Vehicle?networkId=2&vehicleNo=Tu001)
+[19:19:10] I (143748) setup: VEHICLE OK ✓ — vehicle_id=105 vehicle_type_id=4 active=yes
+[19:19:10] I (143749) setup: ══════════════════════════════════════
+[19:19:10] I (143759) bgworker: Job finished: OK
+[19:19:12] gps infoI (145613) gps: ══════════════════════════════════════
+[19:19:15] > setup info
+[19:19:15] > setup infoI (148844) setup: network_id=2 vehicle_id=105 vehicle_type_id=4 vehicle_no=Tu001
+[19:19:17] > gps infoI (150595) gps: ══════════════════════════════════════
+[19:19:22] > gps infoI (155637) gps: ══════════════════════════════════════
+[19:19:27] > gps infoI (160668) gps: ══════════════════════════════════════
+[19:19:32] > gps infoI (165649) gps: ══════════════════════════════════════
+[19:19:34] > auth login 12345 12345
+[19:19:34] > auth login 12345 12345I (167081) auth: auth login: queued on background worker — watch below for LOGIN OK/FAILED
+[19:19:34] > I (167082) auth: ══════════════════════════════════════
+[19:19:34] I (167092) auth: LOGIN — user=12345 mac=88:F1:55:32:58:2C
+[19:19:34] I (167100) api_client: → POST /taxis-api/api/Authentications/Login
+[19:19:34] I (167104) api_client:   Heap before perform()       free=180 KB | largest free block=108 KB
+[19:19:35] I (168448) esp-x509-crt-bundle: Certificate validated
+[19:19:37] I (169955) api_client:   Heap after perform()        free=162 KB | largest free block=108 KB
+[19:19:37] I (169956) api_client: ← HTTP 200 (POST /taxis-api/api/Authentications/Login)
+[19:19:37] E (169974) auth:   JWT decode: payload segment size (540) out of expected range
+[19:19:37] W (169974) auth:   Could not decode access-token expiry from JWT — token will be treated as expired
+[19:19:37] W (169979) auth:   until a fresh login; API calls may fail with 401 until then.
+[19:19:37] I (169990) auth: LOGIN OK ✓ — driver_id=130 vehicle_id=0 vehicle_type_id=0
+[19:19:37] I (169995) api_client: → GET /taxis-api/api/Driver
+[19:19:37] I (169998) api_client:   Heap before perform()       free=179 KB | largest free block=108 KB
+[19:19:37] gps infoI (170685) gps: ══════════════════════════════════════
+[19:19:38] > I (171325) esp-x509-crt-bundle: Certificate validated
+[19:19:39] E (172269) HTTP_HEADER: Buffer length is small to fit all the headers
+[19:19:39] E (172274) HTTP_HEADER: Buffer length is small to fit all the headers
+[19:19:42] gps infoI (175717) gps: ══════════════════════════════════════
+[19:19:47] > I (180680) gps: GPS: fix OK | lat=9.8257 lon=80.2313 speed=1.4km/h sats=7 hdop=1.5 (idle — use 'gps start' for full log)
+[19:19:47] gps infoI (180748) gps: ══════════════════════════════════════
+[19:19:48] > auth info
+[19:19:49] > auth infoI (181929) auth: Logged in: no | Access token valid: no
+[19:19:49] I (181930) session: ══════════════════════════════════════
+[19:19:49] I (181936) session: SESSION STORE (NVS namespace 'session')
+[19:19:49] I (181942) session: ──────────────────────────────────────
+[19:19:49] I (181953) session:   Access token:     SET (511 chars) — EXPIRED/UNKNOWN
+[19:19:49] I (181960) session:   Refresh token:    SET (68 chars)
+[19:19:49] I (181965) session:   Access expiry:    0 (epoch)
+[19:19:49] I (181969) session:   Refresh expiry:   1784555377 (epoch)
+[19:19:49] I (181975) session:   Driver:           id=130 no=12345 name=
+[19:19:49] I (181980) session:   Vehicle:          id=0 type_id=0 no=Tu001
+[19:19:49] I (181986) session:   Network:          id=2 company=Softclient
+[19:19:49] I (181991) session:   Tariff type:      (not set)
+[19:19:49] I (181996) session:   Duty status:      ON DUTY
+[19:19:49] I (182000) session:   Active trip:      local_id=0 server_job_id=0
+[19:19:49] I (182006) session:   Next local trip#: 1
+[19:19:49] I (182010) session: ══════════════════════════════════════
+[19:19:52] > E (185306) esp-tls-mbedtls: read error :-0x0050
+[19:19:52] E (185307) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[19:19:52] E (185307) api_client:   HTTP transport error event
+[19:19:52] I (185312) api_client:   Heap after perform()        free=162 KB | largest free block=108 KB
+[19:19:52] E (185320) api_client: ✗ GET /taxis-api/api/Driver FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[19:19:52] W (185331) auth:   Driver profile fetch failed — continuing without a display name
+[19:19:52] I (185336) auth: ══════════════════════════════════════
+[19:19:52] I (185348) bgworker: Job finished: OK
+[19:19:52] gps infoI (185772) gps: ══════════════════════════════════════
+[19:19:55] > ref fetch
+[19:19:55] > ref fetchI (188653) refdata: ══════════════════════════════════════
+[19:19:55] I (188653) refdata: ref fetch: queued on background worker — watch below for progress
+[19:19:55] I (188655) refdata: REFERENCE DATA — fetching all 4 categories
+[19:19:55] > E (188669) refdata: tariffs: no vehicle_type_id in session — run 'setup vehicle' / login first
+[19:19:56] I (188931) api_client: → GET /taxis-api/api/FixedFares
+[19:19:56] I (188931) api_client:   Heap before perform()       free=181 KB | largest free block=108 KB
+[19:19:57] I (190280) esp-x509-crt-bundle: Certificate validated
+[19:19:57] gps infoI (190770) gps: ══════════════════════════════════════
+[19:19:58] > E (191656) HTTP_HEADER: Buffer length is small to fit all the headers
+[19:19:58] E (191661) HTTP_HEADER: Buffer length is small to fit all the headers
+[19:20:02] gps infoI (195802) gps: ══════════════════════════════════════
+[19:20:07] > gps infoI (200783) gps: ══════════════════════════════════════
+[19:20:11] > E (204147) esp-tls-mbedtls: read error :-0x0050
+[19:20:11] E (204148) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[19:20:11] E (204148) api_client:   HTTP transport error event
+[19:20:11] I (204153) api_client:   Heap after perform()        free=164 KB | largest free block=108 KB
+[19:20:11] E (204161) api_client: ✗ GET /taxis-api/api/FixedFares FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[19:20:11] W (204174) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/fixed_rates.json
+[19:20:11] E (204179) refdata: fixed_rates: fetch failed (HTTP -1)
+[19:20:11] I (204436) api_client: → GET /taxis-api/api/SpecialFare
+[19:20:11] I (204437) api_client:   Heap before perform()       free=181 KB | largest free block=108 KB
+[19:20:12] I (205785) esp-x509-crt-bundle: Certificate validated
+[19:20:12] gps infoI (205816) gps: ══════════════════════════════════════
+[19:20:13] > E (206761) HTTP_HEADER: Buffer length is small to fit all the headers
+[19:20:13] E (206765) HTTP_HEADER: Buffer length is small to fit all the headers
+[19:20:17] gps infoI (210797) gps: ══════════════════════════════════════
+[19:20:22] > gps infoI (215828) gps: ══════════════════════════════════════
+[19:20:26] > E (219608) esp-tls-mbedtls: read error :-0x0050
+[19:20:26] E (219609) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[19:20:26] E (219609) api_client:   HTTP transport error event
+[19:20:26] I (219614) api_client:   Heap after perform()        free=164 KB | largest free block=108 KB
+[19:20:26] E (219622) api_client: ✗ GET /taxis-api/api/SpecialFare FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[19:20:26] W (219635) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/special_fares.json
+[19:20:26] E (219640) refdata: special_fares: fetch failed (HTTP -1)
+[19:20:26] I (219896) api_client: → GET /devices-api/api/PublicHolidays
+[19:20:26] I (219897) api_client:   Heap before perform()       free=181 KB | largest free block=108 KB
+[19:20:27] gps infoI (220815) gps: ══════════════════════════════════════
+[19:20:28] > I (221256) esp-x509-crt-bundle: Certificate validated
+[19:20:29] E (222232) HTTP_HEADER: Buffer length is small to fit all the headers
+[19:20:29] E (222237) HTTP_HEADER: Buffer length is small to fit all the headers
+[19:20:32] gps infoI (225846) gps: ══════════════════════════════════════
+[19:20:37] > gps infoI (230877) gps: ══════════════════════════════════════
+[19:20:42] > E (235179) esp-tls-mbedtls: read error :-0x0050
+[19:20:42] E (235179) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[19:20:42] E (235180) api_client:   HTTP transport error event
+[19:20:42] I (235185) api_client:   Heap after perform()        free=164 KB | largest free block=108 KB
+[19:20:42] E (235193) api_client: ✗ GET /devices-api/api/PublicHolidays FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[19:20:42] W (235206) api_client:   Removed incomplete/failed response file: /spiffs/store/ref/public_holidays.json
+[19:20:42] E (235212) refdata: public_holidays: fetch failed (HTTP -1)
+[19:20:42] W (235217) refdata: REFERENCE DATA — one or more categories failed (see above). Continuing with
+[19:20:42] W (235225) refdata:   whatever was already loaded/cached for the categories that did fail.
+[19:20:42] I (235233) refdata: ══════════════════════════════════════
+[19:20:42] I (235245) bgworker: Job finished: FAILED
+[19:20:42] gps infoI (235858) gps: ══════════════════════════════════════
+[19:20:47] > I (240696) gps: GPS: fix OK | lat=9.8257 lon=80.2314 speed=2.4km/h sats=7 hdop=1.5 (idle — use 'gps start' for full log)
+[19:20:47] gps infoI (240889) gps: ══════════════════════════════════════
+[19:20:52] > gps infoI (245921) gps: ══════════════════════════════════════
+[19:20:58] > gps infoI (250951) gps: ══════════════════════════════════════
+[19:20:59] > ref list tariffs
+[19:20:59] > ref list tariffs
+[19:20:59] #    num    name                 type     flagfall   distR1   distR2  distRng  start    end fD-tD PH
+[19:20:59] (0 rows)
+[19:21:01] > ref list fixedrates
+[19:21:01] > ref list fixedrates
+[19:21:01] #      name                     from             to                     fare active
+[19:21:01] (0 rows)
+[19:21:02] > ref list fixedrates
+[19:21:02] > ref list fixedrates
+[19:21:02] #      name                     from             to                     fare active
+[19:21:02] (0 rows)
+[19:21:03] > gps infoI (255935) gps: ══════════════════════════════════════
+[19:21:04] > ref list specialfares
+[19:21:04] > ref list specialfares
+[19:21:04] #      code         name                           fare typeName  
+[19:21:04] (0 rows)
+[19:21:05] > ref list holidays
+[19:21:05] > ref list holidays
+[19:21:05] #      date       name
+[19:21:05] (0 rows)
+[19:21:06] > ref info
+[19:21:06] > ref infoI (259518) refdata: tariffs=0 fixed_rates=0 special_fares=0 holidays=0 | last_fetch_all=-1s ago
+[19:21:07] > gps infoI (260919) gps: ══════════════════════════════════════

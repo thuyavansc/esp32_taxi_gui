@@ -1,0 +1,2 @@
+[22:13:05] [gui] Logging started (TXT) → logs/serial_log_20260717_221305.txt
+[22:13:09] gps info

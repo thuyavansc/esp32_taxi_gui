@@ -1,0 +1,124 @@
+[16:51:15] [gui] Logging started (TXT) → logs/serial_log_20260717_165115.txt
+[16:51:16] > gps infoI (30061) gps: ══════════════════════════════════════
+[16:51:17] > I (30659) gps: GPS: fix OK | lat=9.8257 lon=80.2313 speed=0.4km/h sats=8 hdop=1.1 (idle — use 'gps start' for full log)
+[16:51:18] > setup network PBI8ZLOC
+[16:51:18] setup network PBI8ZLOCI (31942) setup: ══════════════════════════════════════
+[16:51:18] I (31945) setup: NETWORK LOOKUP — passcode=PBI8ZLOC
+[16:51:18] I (31942) setup: setup network: queued on background worker
+[16:51:18] I (31951) api_client: → GET /devices-api/api/DevicePublic/Network?passcode=PBI8ZLOC
+[16:51:18] > I (31963) api_client:   Heap before perform()       free=181 KB | largest free block=108 KB
+[16:51:19] I (33330) esp-x509-crt-bundle: Certificate validated
+[16:51:21] I (34691) api_client:   Heap after perform()        free=163 KB | largest free block=108 KB
+[16:51:21] I (34692) api_client: ← HTTP 200 (GET /devices-api/api/DevicePublic/Network?passcode=PBI8ZLOC)
+[16:51:21] I (34704) setup: NETWORK OK ✓ — network_id=2 company="Softclient" active=yes
+[16:51:21] I (34705) setup: ══════════════════════════════════════
+[16:51:21] I (34716) bgworker: Job finished: OK
+[16:51:21] gps infoI (35064) gps: ══════════════════════════════════════
+[16:51:26] > gps infoI (40093) gps: ══════════════════════════════════════
+[16:51:31] > gps infoI (45123) gps: ══════════════════════════════════════
+[16:51:32] > setup vehicle Tu001
+[16:51:32] > setup vehicle Tu001I (46303) setup: ══════════════════════════════════════
+[16:51:32] I (46303) setup: setup vehicle: queued on background worker
+[16:51:32] I (46306) setup: VEHICLE LOOKUP — networkId=2 vehicleNo=Tu001
+[16:51:32] > I (46318) api_client: → GET /devices-api/api/DevicePublic/Vehicle?networkId=2&vehicleNo=Tu001
+[16:51:32] I (46325) api_client:   Heap before perform()       free=181 KB | largest free block=108 KB
+[16:51:34] I (47987) esp-x509-crt-bundle: Certificate validated
+[16:51:35] I (49334) api_client:   Heap after perform()        free=163 KB | largest free block=108 KB
+[16:51:35] I (49335) api_client: ← HTTP 200 (GET /devices-api/api/DevicePublic/Vehicle?networkId=2&vehicleNo=Tu001)
+[16:51:35] I (49348) setup: VEHICLE OK ✓ — vehicle_id=105 vehicle_type_id=4 active=yes
+[16:51:35] I (49350) setup: ══════════════════════════════════════
+[16:51:35] I (49360) bgworker: Job finished: OK
+[16:51:36] gps infoI (50118) gps: ══════════════════════════════════════
+[16:51:41] > gps infoI (55147) gps: ══════════════════════════════════════
+[16:51:46] > gps infoI (60126) gps: ══════════════════════════════════════
+[16:51:47] > setup info
+[16:51:47] > setup infoI (60555) setup: network_id=2 vehicle_id=105 vehicle_type_id=4 vehicle_no=Tu001
+[16:51:47] > I (60664) gps: GPS: fix OK | lat=9.8257 lon=80.2313 speed=0.8km/h sats=8 hdop=1.0 (idle — use 'gps start' for full log)
+[16:51:51] gps infoI (65156) gps: ══════════════════════════════════════
+[16:51:56] > gps infoI (70185) gps: ══════════════════════════════════════
+[16:52:01] > gps infoI (75164) gps: ══════════════════════════════════════
+[16:52:06] > gps infoI (80193) gps: ══════════════════════════════════════
+[16:52:10] > auth login 12345 12345
+[16:52:10] > auth login 12345 12345I (84223) auth: auth login: queued on background worker — watch below for LOGIN OK/FAILED
+[16:52:10] I (84223) auth: ══════════════════════════════════════
+[16:52:10] > I (84234) auth: LOGIN — user=12345 mac=88:F1:55:32:58:2C
+[16:52:10] I (84241) api_client: → POST /taxis-api/api/Authentications/Login
+[16:52:10] I (84246) api_client:   Heap before perform()       free=180 KB | largest free block=108 KB
+[16:52:11] gps infoI (85186) gps: ══════════════════════════════════════
+[16:52:13] > I (86803) esp-x509-crt-bundle: Certificate validated
+[16:52:14] I (88347) api_client:   Heap after perform()        free=162 KB | largest free block=108 KB
+[16:52:14] I (88348) api_client: ← HTTP 200 (POST /taxis-api/api/Authentications/Login)
+[16:52:14] E (88362) auth:   JWT decode: payload segment size (540) out of expected range
+[16:52:14] W (88363) auth:   Could not decode access-token expiry from JWT — token will be treated as expired
+[16:52:14] W (88370) auth:   until a fresh login; API calls may fail with 401 until then.
+[16:52:14] I (88380) auth: LOGIN OK ✓ — driver_id=130 vehicle_id=0 vehicle_type_id=0
+[16:52:14] I (88386) api_client: → GET /taxis-api/api/Driver
+[16:52:14] I (88388) api_client:   Heap before perform()       free=179 KB | largest free block=108 KB
+[16:52:16] I (89736) esp-x509-crt-bundle: Certificate validated
+[16:52:16] gps infoI (90218) gps: ══════════════════════════════════════
+[16:52:17] > E (90653) HTTP_HEADER: Buffer length is small to fit all the headers
+[16:52:17] E (90658) HTTP_HEADER: Buffer length is small to fit all the headers
+[16:52:21] gps infoI (95250) gps: ══════════════════════════════════════
+[16:52:26] > gps infoI (100229) gps: ══════════════════════════════════════
+[16:52:30] > E (103609) esp-tls-mbedtls: read error :-0x0050
+[16:52:30] E (103610) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[16:52:30] E (103611) api_client:   HTTP transport error event
+[16:52:30] I (103615) api_client:   Heap after perform()        free=162 KB | largest free block=108 KB
+[16:52:30] E (103623) api_client: ✗ GET /taxis-api/api/Driver FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[16:52:30] W (103634) auth:   Driver profile fetch failed — continuing without a display name
+[16:52:30] I (103639) auth: ══════════════════════════════════════
+[16:52:30] I (103651) bgworker: Job finished: OK
+[16:52:31] gps infoI (105260) gps: ══════════════════════════════════════
+[16:52:33] > auth info
+[16:52:33] > auth infoI (106841) auth: Logged in: no | Access token valid: no
+[16:52:33] I (106842) session: ══════════════════════════════════════
+[16:52:33] I (106848) session: SESSION STORE (NVS namespace 'session')
+[16:52:33] I (106853) session: ──────────────────────────────────────
+[16:52:33] I (106865) session:   Access token:     SET (511 chars) — EXPIRED/UNKNOWN
+[16:52:33] I (106872) session:   Refresh token:    SET (68 chars)
+[16:52:33] I (106877) session:   Access expiry:    0 (epoch)
+[16:52:33] I (106881) session:   Refresh expiry:   1784546535 (epoch)
+[16:52:33] I (106886) session:   Driver:           id=130 no=12345 name=
+[16:52:33] I (106892) session:   Vehicle:          id=0 type_id=0 no=Tu001
+[16:52:33] I (106897) session:   Network:          id=2 company=Softclient
+[16:52:33] I (106903) session:   Tariff type:      (not set)
+[16:52:33] I (106907) session:   Duty status:      OFF DUTY
+[16:52:33] I (106912) session:   Active trip:      local_id=0 server_job_id=0
+[16:52:33] I (106918) session:   Next local trip#: 1
+[16:52:33] I (106921) session: ══════════════════════════════════════
+[16:52:36] > gps infoI (110234) gps: ══════════════════════════════════════
+[16:52:41] > gps infoI (115265) gps: ══════════════════════════════════════
+[16:52:46] > gps infoI (120246) gps: ══════════════════════════════════════
+[16:52:47] > I (120737) gps: GPS: fix OK | lat=9.8257 lon=80.2313 speed=0.6km/h sats=8 hdop=1.0 (idle — use 'gps start' for full log)
+[16:52:48] > duty on
+[16:52:48] duty onI (122179) duty: ON DUTY (local status updated immediately)
+[16:52:48] > I (122182) api_client: → GET /taxis-api/api/DriverStatus/OnDuty
+[16:52:48] I (122183) api_client:   Heap before perform()       free=182 KB | largest free block=108 KB
+[16:52:48] I (122232) wifi:<ba-add>idx:0 (ifx:0, 1c:13:86:d6:48:9e), tid:0, ssn:55, winSize:64
+[16:52:50] I (123586) esp-x509-crt-bundle: Certificate validated
+[16:52:51] E (124534) HTTP_HEADER: Buffer length is small to fit all the headers
+[16:52:51] E (124539) HTTP_HEADER: Buffer length is small to fit all the headers
+[16:52:51] gps infoI (125282) gps: ══════════════════════════════════════
+[16:52:56] > gps infoI (130313) gps: ══════════════════════════════════════
+[16:53:01] > duty info
+[16:53:01] > duty infoI (134695) duty: Duty status: ON DUTY
+[16:53:01] > gps infoI (135296) gps: ══════════════════════════════════════
+[16:53:03] > E (137391) esp-tls-mbedtls: read error :-0x0050
+[16:53:03] E (137392) transport_base: esp_tls_conn_read error, errno=Connection reset by peer
+[16:53:03] E (137392) api_client:   HTTP transport error event
+[16:53:03] I (137397) api_client:   Heap after perform()        free=164 KB | largest free block=108 KB
+[16:53:03] E (137405) api_client: ✗ GET /taxis-api/api/DriverStatus/OnDuty FAILED: ESP_ERR_HTTP_FETCH_HEADER (err=0x7004)
+[16:53:03] I (137417) duty:   OnDuty API call: failed to reach server (HTTP -1) — result is informational only, never blocks the driver
+[16:53:03] I (137426) bgworker: Job finished: OK
+[16:53:03] I (137429) refdata: ══════════════════════════════════════
+[16:53:03] I (137441) refdata: REFERENCE DATA — fetching all 4 categories
+[16:53:03] E (137447) refdata: tariffs: no vehicle_type_id in session — run 'setup vehicle' / login first
+[16:53:04] I (137709) api_client: → GET /taxis-api/api/FixedFares
+[16:53:04] I (137709) api_client:   Heap before perform()       free=181 KB | largest free block=108 KB
+[16:53:05] I (139055) esp-x509-crt-bundle: Certificate validated
+[16:53:06] E (140005) HTTP_HEADER: Buffer length is small to fit all the headers
+[16:53:06] E (140010) HTTP_HEADER: Buffer length is small to fit all the headers
+[16:53:06] gps infoI (140330) gps: ══════════════════════════════════════
+[16:53:11] > gps infoI (145311) gps: ══════════════════════════════════════
+[16:53:16] > gps infoI (150342) gps: ══════════════════════════════════════
+[16:53:17] > I (150741) gps: GPS: fix OK | lat=9.8257 lon=80.2313 speed=0.8km/h sats=8 hdop=1.0 (idle — use 'gps start' for full log)

@@ -1,0 +1,104 @@
+[16:23:07] [gui] Logging started (TXT) → logs/serial_log_20260717_162307.txt
+[16:23:08] > trip infoI (106883) trip: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:08] I (106885) trip: TRIP INFO
+[16:23:08] I (106887) trip:   Local trip id:    0
+[16:23:08] I (106891) trip:   Server job id:    0 (not synced â€” doc 81 phase 5)
+[16:23:08] I (106897) trip:   Customer:         (none)
+[16:23:08] I (106901) trip:   Running:          no
+[16:23:08] I (106905) trip:   Tariff:           #0 type=
+[16:23:08] I (106909) trip:   GPS active:       no | speed=0.0 km/h
+[16:23:08] I (106914) trip:   Distance:         0.000 km
+[16:23:08] I (106918) trip:   â”€â”€ Fare breakdown â”€â”€
+[16:23:08] I (106922) trip:   Flag fall:            0.00Â¢
+[16:23:08] I (106926) trip:   Distance fare:        0.00Â¢
+[16:23:08] I (106931) trip:   Time fare:            0.00Â¢
+[16:23:08] I (106935) trip:   GPS-inactive fare:    0.00Â¢
+[16:23:08] I (106939) trip:   Extras:               0.00Â¢
+[16:23:08] I (106943) trip:   Special fares:        0.00Â¢
+[16:23:08] I (106948) trip:   TOTAL:                0.00Â¢  ($0.00)
+[16:23:08] I (106953) trip: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:10] > setup network PBI8ZLOC
+[16:23:10] > setup network PBI8ZLOCI (108266) setup: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:10] I (108269) setup: NETWORK LOOKUP â€” passcode=PBI8ZLOC
+[16:23:10] I (108266) setup: setup network: queued on background worker
+[16:23:10] I (108276) api_client: â†’ GET /devices-api/api/DevicePublic/Network?passcode=PBI8ZLOC
+[16:23:10] > I (108287) api_client:   Heap before perform()       free=180 KB | largest free block=108 KB
+[16:23:10] trip infoI (108937) trip: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:10] I (108939) trip: TRIP INFO
+[16:23:10] I (108942) trip:   Local trip id:    0
+[16:23:10] I (108945) trip:   Server job id:    0 (not synced â€” doc 81 phase 5)
+[16:23:10] I (108951) trip:   Customer:         (none)
+[16:23:10] I (108955) trip:   Running:          no
+[16:23:10] I (108959) trip:   Tariff:           #0 type=
+[16:23:10] I (108963) trip:   GPS active:       no | speed=0.0 km/h
+[16:23:10] I (108968) trip:   Distance:         0.000 km
+[16:23:10] I (108972) trip:   â”€â”€ Fare breakdown â”€â”€
+[16:23:10] I (108976) trip:   Flag fall:            0.00Â¢
+[16:23:10] I (108980) trip:   Distance fare:        0.00Â¢
+[16:23:10] I (108985) trip:   Time fare:            0.00Â¢
+[16:23:10] I (108989) trip:   GPS-inactive fare:    0.00Â¢
+[16:23:10] I (108993) trip:   Extras:               0.00Â¢
+[16:23:10] I (108997) trip:   Special fares:        0.00Â¢
+[16:23:10] I (109002) trip:   TOTAL:                0.00Â¢  ($0.00)
+[16:23:10] I (109007) trip: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:12] > gps infoI (110370) gps: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:12] I (110372) gps: GPS MODULE STATUS
+[16:23:12] I (110375) gps: â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+[16:23:12] I (110386) gps:   UART:        UART2 @ 9600 baud
+[16:23:12] I (110391) gps:   Pins:        TX=GPIO17 RX=GPIO16
+[16:23:12] I (110395) gps:   Running:      YES âœ“
+[16:23:12] I (110399) gps:   Total reads:  893
+[16:23:12] I (110402) gps:   Valid fixes:  891
+[16:23:12] I (110405) gps:   Fix:          YES âœ“
+[16:23:12] I (110409) gps:   Latitude:     9.825677Â°
+[16:23:12] I (110413) gps:   Longitude:    80.231307Â°
+[16:23:12] I (110416) gps:   Altitude:     9.1 m
+[16:23:12] I (110420) gps:   Speed:        0.2 km/h
+[16:23:12] I (110423) gps:   Course:       0Â°
+[16:23:12] I (110427) gps:   Satellites:   9
+[16:23:12] I (110430) gps:   HDOP:         1.0
+[16:23:12] I (110433) gps:   Quality:      1
+[16:23:12] I (110436) gps:   Cmd state:    idle
+[16:23:12] I (110439) gps: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:12] > I (110740) esp-x509-crt-bundle: Certificate validated
+[16:23:12] trip infoI (110901) trip: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:12] I (110903) trip: TRIP INFO
+[16:23:12] I (110905) trip:   Local trip id:    0
+[16:23:12] I (110909) trip:   Server job id:    0 (not synced â€” doc 81 phase 5)
+[16:23:12] I (110915) trip:   Customer:         (none)
+[16:23:12] I (110919) trip:   Running:          no
+[16:23:12] I (110923) trip:   Tariff:           #0 type=
+[16:23:12] I (110927) trip:   GPS active:       no | speed=0.0 km/h
+[16:23:12] I (110932) trip:   Distance:         0.000 km
+[16:23:12] I (110936) trip:   â”€â”€ Fare breakdown â”€â”€
+[16:23:12] I (110940) trip:   Flag fall:            0.00Â¢
+[16:23:12] I (110944) trip:   Distance fare:        0.00Â¢
+[16:23:12] I (110949) trip:   Time fare:            0.00Â¢
+[16:23:12] I (110953) trip:   GPS-inactive fare:    0.00Â¢
+[16:23:12] I (110957) trip:   Extras:               0.00Â¢
+[16:23:12] I (110961) trip:   Special fares:        0.00Â¢
+[16:23:12] I (110966) trip:   TOTAL:                0.00Â¢  ($0.00)
+[16:23:12] I (110971) trip: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:13] > I (111918) api_client:   Heap after perform()        free=163 KB | largest free block=108 KB
+[16:23:13] I (111919) api_client: â†� HTTP 200 (GET /devices-api/api/DevicePublic/Network?passcode=PBI8ZLOC)
+[16:23:13] I (111931) setup: NETWORK OK âœ“ â€” network_id=2 company="Softclient" active=yes
+[16:23:13] I (111932) setup: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:13] I (111944) bgworker: Job finished: OK
+[16:23:14] trip infoI (112934) trip: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
+[16:23:14] I (112936) trip: TRIP INFO
+[16:23:14] I (112938) trip:   Local trip id:    0
+[16:23:14] I (112942) trip:   Server job id:    0 (not synced â€” doc 81 phase 5)
+[16:23:14] I (112948) trip:   Customer:         (none)
+[16:23:14] I (112952) trip:   Running:          no
+[16:23:14] I (112956) trip:   Tariff:           #0 type=
+[16:23:14] I (112960) trip:   GPS active:       no | speed=0.0 km/h
+[16:23:14] I (112965) trip:   Distance:         0.000 km
+[16:23:14] I (112969) trip:   â”€â”€ Fare breakdown â”€â”€
+[16:23:14] I (112973) trip:   Flag fall:            0.00Â¢
+[16:23:14] I (112977) trip:   Distance fare:        0.00Â¢
+[16:23:14] I (112982) trip:   Time fare:            0.00Â¢
+[16:23:14] I (112986) trip:   GPS-inactive fare:    0.00Â¢
+[16:23:14] I (112990) trip:   Extras:               0.00Â¢
+[16:23:14] I (112994) trip:   Special fares:        0.00Â¢
+[16:23:14] I (112999) trip:   TOTAL:                0.00Â¢  ($0.00)
+[16:23:14] I (113004) trip: â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�â•�
