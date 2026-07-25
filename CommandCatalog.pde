@@ -135,8 +135,14 @@ void initCommandCatalog() {
 
     new CommandCategory("AT: GNSS", new CommandSpec[] {
       new CommandSpec("GNSS power status", "AT+CGNSSPWR?"),
-      new CommandSpec("GNSS fix info", "AT+CGNSSINFO"),
+      new CommandSpec("GNSS fix info (native, 9 CSV fields)", "AT+CGNSSINFO"),
+      new CommandSpec("GNSS fix info — one-shot lat/lon/speed/course", "AT+CGPSINFO"),
       new CommandSpec("NMEA output status", "AT+CGNSSTST?"),
+      new CommandSpec("NMEA-to-UART routing status", "AT+CGNSSPORTSWITCH?"),
+      new CommandSpec("A-GPS: enable XTRA (predicted ephemeris)", "AT+CGNSSCMD=10,1"),
+      new CommandSpec("A-GPS: enable SUPL (standard OMA assist)", "AT+CGNSSCMD=20,1"),
+      new CommandSpec("A-GPS: enable hot-still (fast reacquire)", "AT+CGNSSCMD=30,1"),
+      new CommandSpec("A-GPS: SUPL server currently configured", "AT+SUPLSERVER?"),
     }),
 
     new CommandCategory("Setup (Network/Vehicle)", new CommandSpec[] {
