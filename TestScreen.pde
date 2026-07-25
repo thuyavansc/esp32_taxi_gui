@@ -9,6 +9,7 @@
 
 GButton btnQcBack;
 GButton btnHelp, btnGpsInfo, btnSetupInfo, btnAuthInfo, btnDutyInfo, btnTripInfo;
+GButton btnRamInfo, btnReboot, btnNetInfo, btnNetTest;
 
 void initQuickCommandsScreen() {
   btnQcBack = new GButton(0, 4, 56, 28, "< Back", C_BTN, C_TEXT);
@@ -23,6 +24,12 @@ void initQuickCommandsScreen() {
   y += h + gap;
   btnDutyInfo  = new GButton(8, y, w, h, "duty info", C_BTN, C_TEXT);
   btnTripInfo  = new GButton(8 + w + gap, y, w, h, "trip info", C_BTN, C_TEXT);
+  y += h + gap;
+  btnRamInfo   = new GButton(8, y, w, h, "ram info", C_BTN, C_TEXT);
+  btnReboot    = new GButton(8 + w + gap, y, w, h, "reboot", C_BTN, C_TEXT);
+  y += h + gap;
+  btnNetInfo   = new GButton(8, y, w, h, "net info", C_BTN, C_TEXT);
+  btnNetTest   = new GButton(8 + w + gap, y, w, h, "net test", C_BTN, C_TEXT);
 }
 
 void drawQuickCommandsScreen() {
@@ -38,13 +45,17 @@ void drawQuickCommandsScreen() {
   btnHelp.draw(dispMouseLX, dispMouseLY); btnGpsInfo.draw(dispMouseLX, dispMouseLY);
   btnSetupInfo.draw(dispMouseLX, dispMouseLY); btnAuthInfo.draw(dispMouseLX, dispMouseLY);
   btnDutyInfo.draw(dispMouseLX, dispMouseLY); btnTripInfo.draw(dispMouseLX, dispMouseLY);
+  btnRamInfo.draw(dispMouseLX, dispMouseLY); btnReboot.draw(dispMouseLX, dispMouseLY);
+  btnNetInfo.draw(dispMouseLX, dispMouseLY); btnNetTest.draw(dispMouseLX, dispMouseLY);
 
   textAlign(LEFT, TOP);
   textSize(10);
   fill(C_TEXT2);
-  text("These buttons just save you retyping the read-only 'info'\n" +
-       "commands (from the side menu's full catalog) while testing.",
-       10, 170, 300, 100);
+  text("These buttons just save you retyping common commands (from\n" +
+       "the side menu's full catalog) while testing. 'reboot' resets\n" +
+       "the device immediately, no confirmation. 'net test' makes a\n" +
+       "real HTTPS call to confirm the device actually has internet.",
+       10, 240, 300, 100);
 }
 
 boolean handleQuickCommandsScreenClick(float lx, float ly) {
@@ -55,5 +66,9 @@ boolean handleQuickCommandsScreenClick(float lx, float ly) {
   if (btnAuthInfo.contains(lx, ly))  { sendCommand("auth info"); return true; }
   if (btnDutyInfo.contains(lx, ly))  { sendCommand("duty info"); return true; }
   if (btnTripInfo.contains(lx, ly))  { sendCommand("trip info"); return true; }
+  if (btnRamInfo.contains(lx, ly))   { sendCommand("ram info"); return true; }
+  if (btnReboot.contains(lx, ly))    { sendCommand("reboot"); return true; }
+  if (btnNetInfo.contains(lx, ly))   { sendCommand("net info"); return true; }
+  if (btnNetTest.contains(lx, ly))   { sendCommand("net test"); return true; }
   return true;
 }

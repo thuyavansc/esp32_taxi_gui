@@ -19,6 +19,14 @@ GButton btnAutoPoll, btnShowGps, btnShowTrip;
 // shouldShowInLog()) — useful even for a command you typed yourself,
 // not just the auto-poll. All three persist across restarts, same as
 // the COM port/baud rate.
+//
+// IMPORTANT (doc 142 §1.2, confirmed after a real user mix-up):
+// showGpsLogs/showTripLogs are DISPLAY FILTERS ONLY — they never send
+// anything to the device. The GPS/trip backends keep running exactly
+// the same whether these are on or off; only what THIS GUI prints
+// changes. Labeled "GPS Log:"/"TRIP Log:" (not just "GPS:"/"TRIP:") for
+// exactly this reason. To actually stop a GPS backend, use the real
+// device commands in the GPS category ("gps neo6m off"/"gps gnss off").
 boolean autoPollEnabled = true;
 boolean showGpsLogs = true;
 boolean showTripLogs = true;
@@ -56,9 +64,11 @@ void initTopMenuBar() {
 
   btnAutoPoll = new GButton(x, y, 100, h, "", C_BTN, C_TEXT);
   x += 100 + 8;
-  btnShowGps = new GButton(x, y, 90, h, "", C_BTN, C_TEXT);
-  x += 90 + 8;
-  btnShowTrip = new GButton(x, y, 90, h, "", C_BTN, C_TEXT);
+  // Widened from 90 -> 116 (doc 142 §4.3) so the clarified "GPS Log:"/
+  // "TRIP Log:" labels below fit without overflowing the button.
+  btnShowGps = new GButton(x, y, 116, h, "", C_BTN, C_TEXT);
+  x += 116 + 8;
+  btnShowTrip = new GButton(x, y, 116, h, "", C_BTN, C_TEXT);
 
   autoPollEnabled = settingsGet("autoPoll", "1").equals("1");
   showGpsLogs = settingsGet("showGpsLogs", "1").equals("1");
@@ -117,11 +127,15 @@ void drawTopMenuBar() {
   btnAutoPoll.fg = autoPollEnabled ? C_BG : C_TEXT;
   btnAutoPoll.draw();
 
-  btnShowGps.label = "GPS: " + (showGpsLogs ? "ON" : "OFF");
+  // Labels say "Log:" explicitly (doc 142 §4.3) — these buttons only
+  // show/hide lines in THIS GUI's own log panel; they never reach the
+  // device. Old plain "GPS: ON/OFF" label read like a real device
+  // toggle and caused exactly that confusion — see doc 142 §1.2.
+  btnShowGps.label = "GPS Log:" + (showGpsLogs ? "ON" : "OFF");
   btnShowGps.bg = showGpsLogs ? C_BTN : C_ERROR;
   btnShowGps.draw();
 
-  btnShowTrip.label = "TRIP: " + (showTripLogs ? "ON" : "OFF");
+  btnShowTrip.label = "TRIP Log:" + (showTripLogs ? "ON" : "OFF");
   btnShowTrip.bg = showTripLogs ? C_BTN : C_ERROR;
   btnShowTrip.draw();
 
@@ -245,7 +259,10 @@ boolean handleTopMenuBarClick(float mx, float my) {
   if (btnShowGps.contains(mx, my)) {
     showGpsLogs = !showGpsLogs;
     settingsSet("showGpsLogs", showGpsLogs ? "1" : "0");
-    logLine("[gui] GPS log lines " + (showGpsLogs ? "SHOWN" : "HIDDEN") + " (GPS data still updates live either way)");
+    logLine("[gui] GPS log lines " + (showGpsLogs ? "SHOWN" : "HIDDEN") +
+            " in THIS GUI panel only — the device's GPS backends keep running" +
+            " either way. Use the GPS category's 'gps neo6m off'/'gps gnss off'" +
+            " to actually stop them (doc 142).");
     return true;
   }
   if (btnShowTrip.contains(mx, my)) {
